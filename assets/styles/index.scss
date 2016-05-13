@@ -1,2 +1,16 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.clickable-pills {
+  background-color: black;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.clickable-pills h2{
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
