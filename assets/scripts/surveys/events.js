@@ -31,6 +31,11 @@ const addHandlers = function() {
   // Add answerSurvey handler
 
   // Add deleteSurvey handler
+//   $('.delete-survey').on('click', function (event) {
+//     event.preventDefault();
+//     console.log('survey delete requested');
+//
+//   });
 };
 
 // Export Add Handlers Function
