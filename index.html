@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
-
+      <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Condensed' rel='stylesheet' type='text/css'>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <title>SoftSurv</title>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+    <body class="container-fluid body">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <!--NAV BAR -->
+      <ul class="nav navbar nav-pills">
+          <li><img class="profile-picture" src="" alt="" /></li>
+        <li role="presentation" class="disbaled"><a href="#">Featured</a></li>
+        <li role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
+      </ul>
+
+      <!--SITE HEADER WITH TITLE-->
+      <header class="title-header-section">
+        <h1 class="web-site-title">softserv</h1>
+      </header>
+
+      <!--HOME/ show this message when user is not logged in -->
+      <section class="body constainer-fluid show-when-logged-out hide">
+        <div class="jumbotron landing-message">
+          <h3>Please sign in or log in to show your surveys</h3>
+        </div>
+      </section>
+
+      <!--HOME/ show all surveys when user is logged in -->
+      <section class="body container-fluid your-surveys">
+        <div class="surveys clickable-pills">
+          <h2>Survey 1</h1>
+        </div>
+        <div class="surveys clickable-pills">
+          <h2>Survey 2</h1>
+        </div>
+      </section>
+
+      <footer></footer>
+
     </body>
+
+
+
+
+
+    <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+          <h4 class="modal-title">Modal title</h4>
+
+          <form id="sign-in" class="modal-sign-in-section text" action="index.html" method="post">
+            <input class="input-fields" type="text" name="credentials[email]" value="" placeholder="Email">
+            <br>
+            <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+            <br><br>
+            <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Login">
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
 </html>
