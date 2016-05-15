@@ -14,15 +14,18 @@ $orange-sorbet: #ffcb85;
 body{
   background-color: $whipped-cream;
 }
+.nav > li{
+  color:$strawberry-icecream;
+}
 .web-site-title {
   color: $brown-chocolate;
+}
+.landing-message{
+  background-color: $orange-sorbet;
 }
 .clickable-pills {
   background-color: $orange-sorbet;
 }
 .clickable-pills h2{
   color: $whipped-cream;
-}
-.nav > li{
-  color:$strawberry-icecream;
 }

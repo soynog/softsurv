@@ -4,12 +4,23 @@ $title-font: 'Indie Flower';
 body{
   font-family: 'Roboto Condensed', sans-serif;
 }
+.navbar li{
+  font-size: 18px;
+}
 .web-site-title{
   font-family: 'Indie Flower', 'cursive';
   text-align: center;
   font-weight: bolder;
   font-size: 100px;
 }
+.landing-message{
+  font-size: 18px;
+  text-align: center;
+}
 .clickable-pills h2{
+  text-align: center;
+}
+
+.modal-title{
   text-align: center;
 }

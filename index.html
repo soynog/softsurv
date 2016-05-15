@@ -8,42 +8,62 @@
       <title>SoftSurv</title>
     </head>
     <body class="container-fluid body">
+
       <!--NAV BAR -->
       <ul class="nav navbar nav-pills">
           <li><img class="profile-picture" src="" alt="" /></li>
-        <li role="presentation" class="active"><a href="#">Featured</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation" class="pull-right"><a href="#">Sign-in</a></li>
+        <li role="presentation" class="disbaled"><a href="#">Featured</a></li>
+        <li role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
       </ul>
-      <!--TITLE HEADER -->
+
+      <!--SITE HEADER WITH TITLE-->
       <header class="title-header-section">
         <h1 class="web-site-title">softserv</h1>
       </header>
 
-      <!--HOME/ show all surveys when user is logged in -->
-      <section class="body container-fluid your-surveys">
-
-        <div class="surveys clickable-pills">
-          <h2>Survey 1</h1>
+      <!--HOME/ show this message when user is not logged in -->
+      <section class="body constainer-fluid show-when-logged-out hide">
+        <div class="jumbotron landing-message">
+          <h3>Please sign in or log in to show your surveys</h3>
         </div>
-        <div class="surveys clickable-pills">
-          <h2>Survey 2</h1>
-        </div>
-
       </section>
 
-      <section class="body container-fluid">
-
+      <!--HOME/ show all surveys when user is logged in -->
+      <section class="body container-fluid your-surveys">
         <div class="surveys clickable-pills">
           <h2>Survey 1</h1>
         </div>
         <div class="surveys clickable-pills">
           <h2>Survey 2</h1>
         </div>
-
       </section>
 
       <footer></footer>
 
     </body>
+
+
+
+
+
+    <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+          <h4 class="modal-title">Modal title</h4>
+
+          <form id="sign-in" class="modal-sign-in-section text" action="index.html" method="post">
+            <input class="input-fields" type="text" name="credentials[email]" value="" placeholder="Email">
+            <br>
+            <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+            <br><br>
+            <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Login">
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
 </html>
