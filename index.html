@@ -12,8 +12,9 @@
       <!--NAV BAR -->
       <ul class="nav navbar nav-pills">
           <li><img class="profile-picture" src="" alt="" /></li>
-        <li role="presentation" class="disbaled"><a href="#">Featured</a></li>
-        <li role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
+        <li role="presentation" class="disabled"><a href="#">Featured</a></li>
+        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-up-modal"><a href="#">Sign-up</a></li>
+        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
       </ul>
 
       <!--SITE HEADER WITH TITLE-->
@@ -38,6 +39,10 @@
         </div>
       </section>
 
+      <section class="survey-form-holder container-fluid ">
+
+      </section>
+
       <footer></footer>
 
     </body>
@@ -45,24 +50,52 @@
 
 
 
+<!--MODALS-->
 
-    <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in">
+
+    <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
 
-          <h4 class="modal-title">Modal title</h4>
+          <h4 class="modal-title">Sign-up for softsurv</h4>
 
-          <form id="sign-in" class="modal-sign-in-section text" action="index.html" method="post">
+          <form id="sign-up-form" class="modal-sign-up-section text" action="index.html" method="post">
             <input class="input-fields" type="text" name="credentials[email]" value="" placeholder="Email">
             <br>
             <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
-            <br><br>
-            <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Login">
+            <br>
+            <input class="input-fields" type="password" name="credentials[password_confirmation]" value="" placeholder="Password Confirmation">
+            <br>
+            <br>
+            <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Signup">
           </form>
 
         </div>
       </div>
     </div>
+
+
+
+
+<!--MODAL SIGN-IN-->
+      <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+
+            <h4 class="modal-title">Modal title</h4>
+
+            <form id="sign-in-form" class="modal-sign-in-section text" action="index.html" method="post">
+              <input class="input-fields" type="text" name="credentials[email]" value="" placeholder="Email">
+              <br>
+              <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+              <br>
+              <br>
+              <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Login">
+            </form>
+
+          </div>
+        </div>
+      </div>
 
 
 
