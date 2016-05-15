@@ -1,7 +1,8 @@
 'use strict';
 
 // Require necessary modules
-
+const docsApi = require('./api');
+const docsUi = require('./ui');
 
 // addHandlers function for Surveys Actions
 // Each handler calls api function and passes ui functions as callbacks
