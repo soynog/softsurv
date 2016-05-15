@@ -15,6 +15,7 @@
         <li role="presentation" class="disabled"><a href="#">Featured</a></li>
         <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-up-modal"><a href="#">Sign-up</a></li>
         <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
+        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".change-pw-modal"><a href="#">Change-PW</a></li>
       </ul>
 
       <!--SITE HEADER WITH TITLE-->
@@ -53,6 +54,7 @@
 <!--MODALS-->
 
 
+<!--MODAL SIGN-UP-->
     <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -75,8 +77,6 @@
     </div>
 
 
-
-
 <!--MODAL SIGN-IN-->
       <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in">
         <div class="modal-dialog modal-sm">
@@ -91,6 +91,7 @@
               <br>
               <br>
               <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Login">
+              <input id="sign-out-button" type="submit" name="submit" class="btn btn-primary input-fields" value="signOut">
             </form>
 
           </div>
@@ -98,5 +99,24 @@
       </div>
 
 
+<!--MODAL CHANGE PW-->
+      <div class="modal fade change-pw-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+
+            <h4 class="modal-title">Sign-up for softsurv</h4>
+
+            <form id="change-pw-form" class="modal-change-pw-section text" action="index.html" method="patch">
+              <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+              <br>
+              <input class="input-fields" type="password" name="credentials[password_confirmation]" value="" placeholder="Password Confirmation">
+              <br>
+              <br>
+              <input id="change-pw" type="submit" name="submit" class="btn btn-primary input-fields" value="Change Password">
+            </form>
+
+          </div>
+        </div>
+      </div>
 
 </html>
