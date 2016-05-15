@@ -38,11 +38,16 @@
         <div class="surveys clickable-pills">
           <h2>Survey 2</h1>
         </div>
+
+      <section>
+        <button type="button" data-toggle="modal" data-target=".new-survey-modal" name="add-survey">Add Survey</button>
       </section>
 
-      <section class="survey-form-holder container-fluid ">
-
       </section>
+
+      <div class="survey-form-holder container-fluid">
+
+      </div>
 
       <footer></footer>
 
@@ -107,9 +112,9 @@
             <h4 class="modal-title">Sign-up for softsurv</h4>
 
             <form id="change-pw-form" class="modal-change-pw-section text" action="index.html" method="patch">
-              <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+              <input class="input-fields" type="password" name="passwords[old]" value="" placeholder="Old Password">
               <br>
-              <input class="input-fields" type="password" name="credentials[password_confirmation]" value="" placeholder="Password Confirmation">
+              <input class="input-fields" type="password" name="passwords[new]" value="" placeholder="New Password">
               <br>
               <br>
               <input id="change-pw" type="submit" name="submit" class="btn btn-primary input-fields" value="Change Password">
