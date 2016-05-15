@@ -11,7 +11,16 @@ const renderNewSurveyForm = function() {
   $('.survey-form-holder').append(newSurveyForm);
 };
 
+// Renders All User's Surveys
+const showAllUserSurveys = function(surveys) {
+  console.log('show all user surveys');
+  let showUserSurveys = require('./templates/show-user-surveys.handlebars');
+  $('.show-all-user-surveys').append(showUserSurveys({
+    surveys : surveys
+  }));
+};
 
 module.exports = {
   renderNewSurveyForm,
+  showAllUserSurveys
 };

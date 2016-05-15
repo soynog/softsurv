@@ -50,10 +50,22 @@ const createSurvey = function(success, failure, question, options) {
 // no authentication -- increments counter in survey based on question answer
 
 // deleteSurvey function - DELETE
-// delete survey
+  const deleteSurvey = function(success, failure, id) {
+    console.log("deleting survey");
+    let url = app.api + '/surveys/' + id;
+    $.ajax({
+      method: 'DELETE',
+      url,
+      headers: {
+        Authorization: 'Token token=' + app.user.token,
+      }
+    }).done(success)
+    .fail(failure);
+  };
 
 // Export functions as module
 module.exports = {
   getSurveys,
   createSurvey,
+  deleteSurvey
 };
