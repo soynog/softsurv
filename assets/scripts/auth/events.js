@@ -1,7 +1,7 @@
 'use strict';
 
 // Require necessary modules
-const getFormFields = require('lib/get-form-fields'); // path from root--should work?
+const getFormFields = require('../../../lib/get-form-fields'); // path from root--should work?
 const authApi = require('./api');
 const authUi = require('./ui');
 
