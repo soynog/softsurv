@@ -11,8 +11,13 @@
 // get the info for a single survey based on its id -- for answering a survey
 // is this necessary? Or will it happen automatically when someone enters the url into the browser?
 
-// Sign Out Function - DELETE
+// createSurvey function - POST
+// user creates a new survey with name, questions, etc.
 
-// Change PW Function - PATCH
+// answerSurvey function - PATCH
+// no authentication -- increments counter in survey based on question answer
+
+// deleteSurvey function - DELETE
+// delete survey
 
 // Export functions as module
