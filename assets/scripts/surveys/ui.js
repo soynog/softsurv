@@ -1,5 +1,6 @@
 'use strict';
 const app = require('../app-data');
+const display = require('../display');
 // Require app-data so that user/state info can be updated.
 
 // Set of functions to call on success/failure of AJAX requests.
@@ -8,6 +9,7 @@ const app = require('../app-data');
 const getSurveysSuccess = function(data) {
   console.log("Surveys Loaded!");
   app.surveys = data.surveys;
+  display.showAllUserSurveys(app.surveys);
   console.log(data);
   console.log(app);
 };

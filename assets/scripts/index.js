@@ -7,5 +7,6 @@ const surveyEvents = require('./surveys/events');
 $(() => {
   authEvents.addHandlers();
   display.renderNewSurveyForm();
+  display.showAllUserSurveys();
   surveyEvents.addHandlers();
 });
