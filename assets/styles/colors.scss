@@ -1,0 +1,28 @@
+$black: black;
+$white: white;
+$whipped-cream: #fefbea;
+$tan-vanilla: #fdf5c9;
+$green-mint: #c2f2d0;
+$strawberry-icecream: #f5b1af;
+$pink-strawberry: #ffc5d9;
+$brown-chocolate: #6b3e26;
+$orange-sorbet: #ffcb85;
+
+
+
+
+body{
+  background-color: $whipped-cream;
+}
+.web-site-title {
+  color: $brown-chocolate;
+}
+.clickable-pills {
+  background-color: $orange-sorbet;
+}
+.clickable-pills h2{
+  color: $whipped-cream;
+}
+.nav > li{
+  color:$strawberry-icecream;
+}

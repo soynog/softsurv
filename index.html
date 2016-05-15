@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>SoftSurv</title>
-
+      <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Condensed' rel='stylesheet' type='text/css'>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <title>SoftSurv</title>
     </head>
-    <body class="container-fluid">
-      <nav>
-      </nav>
+    <body class="container-fluid body">
+      <!--NAV BAR -->
+      <ul class="nav navbar nav-pills">
+          <li><img class="profile-picture" src="" alt="" /></li>
+        <li role="presentation" class="active"><a href="#">Featured</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation" class="pull-right"><a href="#">Sign-in</a></li>
+      </ul>
+      <!--TITLE HEADER -->
+      <header class="title-header-section">
+        <h1 class="web-site-title">softserv</h1>
+      </header>
 
-      <section class="body container-fluid">
+      <!--HOME/ show all surveys when user is logged in -->
+      <section class="body container-fluid your-surveys">
+
         <div class="surveys clickable-pills">
           <h2>Survey 1</h1>
         </div>
@@ -18,8 +30,20 @@
           <h2>Survey 2</h1>
         </div>
 
+      </section>
+
+      <section class="body container-fluid">
+
+        <div class="surveys clickable-pills">
+          <h2>Survey 1</h1>
+        </div>
+        <div class="surveys clickable-pills">
+          <h2>Survey 2</h1>
+        </div>
 
       </section>
+
+      <footer></footer>
 
     </body>
 </html>
