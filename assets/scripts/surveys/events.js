@@ -13,7 +13,7 @@ const addHandlers = function() {
   $('.show-all-survey-button').on('click', function (event) {
     console.log("show all");
     event.preventDefault();
-    // authApi.signOut(authUi.signOutSuccess, authUi.failure);
+    surveyApi.getSurveys(surveyUi.getSurveysSuccess, surveyUi.failure);
   });
 
   // Add showSurvey handler
