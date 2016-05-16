@@ -1,1 +1,15 @@
-<h1> SURVEY RESPONSE FORM </h1>
+{{#each survey}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{this.survey.question}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="radio">
+        <label>
+          <input type="radio" name="surveyOptions" id="surveyOptions-{{this.survey.options}}" value="option-{{this.survey.options}}" checked>
+          {{this.survey.options}}
+        </label>
+      </div>
+    </div>
+  </div>
+{{/each}}

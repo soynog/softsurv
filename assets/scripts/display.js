@@ -21,10 +21,10 @@ const showAllUserSurveys = function(surveys) {
 };
 
 // Renders Survey Response Form
-const renderSurveyResponseForm = function() {
+const renderSurveyResponseForm = function(survey) {
   console.log('rendering survey response form');
   let surveyResponse = require('./templates/survey-response-form.handlebars');
-  $('.survey-response-form-holder').append(surveyResponse);
+  $('.survey-response-form-holder').append(surveyResponse({survey}));
 };
 
 module.exports = {

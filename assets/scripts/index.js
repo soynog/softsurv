@@ -12,8 +12,7 @@ $(() => {
   if (params) {
     console.log("Grabbing params");
     console.log(params);
-    surveyApi.showSurvey(surveyUi.success,surveyUi.failure,params.id);
-    display.renderSurveyResponseForm();
+    surveyApi.showSurvey(surveyUi.showSurveySuccess,surveyUi.failure,params.id);
   } // else {
   // Wrap this in an else statement after testing
     console.log("Ain't no paramters heah");
