@@ -42,6 +42,11 @@ const addHandlers = function() {
   });
 
   // Add answerSurvey handler
+  $('.survey-response-form').on('submit', function(event){
+    event.preventDefault();
+    let data = getFormFields(this);
+    console.log(data);
+  });
 
   // Add deleteSurvey handler
 //   $('.delete-survey').on('click', function (event) {

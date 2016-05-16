@@ -65,6 +65,20 @@ const createSurvey = function(success, failure, question, options) {
 
 // answerSurvey function - PATCH
 // no authentication -- increments counter in survey based on question answer
+const respondSurvey = function(success, failure, id, data) {
+  console.log("patch survey");
+  let url = app.api + '/respond/' + id;
+  let patchData = { index : data.surveyOptions };
+  console.log(id);
+  $.ajax({
+    method: 'PATCH',
+    url,
+    data: patchData,
+  }).done(success)
+  .fail(failure);
+};
+
+
 
 // deleteSurvey function - DELETE
   const deleteSurvey = function(success, failure, id) {
@@ -86,4 +100,5 @@ module.exports = {
   showSurvey,
   createSurvey,
   deleteSurvey,
+  respondSurvey,
 };
