@@ -17,6 +17,11 @@ const addHandlers = function() {
   });
 
   // Add showSurvey handler
+  $('.single-survey-url').on('click', function (event) {
+    console.log('showing one survery');
+    event.preventDefault();
+    surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure);
+  });
 
   $('#new-survey-form').on('submit', function (event) {
     event.preventDefault();
