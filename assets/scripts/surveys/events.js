@@ -24,9 +24,9 @@ const addHandlers = function() {
     surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure);
   });
 
-  $('.add-survey-option-button').on('click', function(event) {
-    console.log("Adding a survey option");
+  $('.add-option-button').on('click', function(event) {
     event.preventDefault();
+    console.log("Adding a survey option");
     display.addSurveyOption();
   });
 
