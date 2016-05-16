@@ -13,12 +13,12 @@ $(() => {
     console.log("Grabbing params");
     console.log(params);
     surveyApi.showSurvey(surveyUi.showSurveySuccess,surveyUi.failure,params.id);
-  } // else {
+  } //else {
   // Wrap this in an else statement after testing
     console.log("Ain't no paramters heah");
     authEvents.addHandlers();
     display.renderNewSurveyForm();
     display.showAllUserSurveys();
     surveyEvents.addHandlers();
-  // }
+  //}
 });
