@@ -1,5 +1,4 @@
 {{#each survey}}
-  {{#each this}}
     <div class="panel panel-default">
       <div class="panel-heading">
         <h2 class="panel-title">{{this.survey.question}}</h3>
@@ -9,8 +8,8 @@
           {{#each this.options}}
           <div class="radio">
             <label>
-              <input type="radio" name="surveyOptions" id="surveyOptions-{{this.survey.options}}" value="option-{{this.survey.options}}" checked>
-              {{this}}
+              <input type="radio" name="surveyOptions" id="surveyOptions-{{this.options}}" value="option-{{this.options}}" checked>
+              {{this.text}}
             </label>
           </div>
           {{/each}}
@@ -18,5 +17,4 @@
         </form>
       </div>
     </div>
-  {{/each}}
 {{/each}}
