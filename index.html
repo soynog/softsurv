@@ -7,13 +7,12 @@
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <title>SoftSurv</title>
     </head>
-    <body class="container-fluid body">
+    <body class="container body">
 
       <!--NAV BAR -->
       <ul class="nav navbar nav-pills">
           <li><img class="profile-picture" src="" alt="" /></li>
         <li role="presentation" class="disabled"><a href="#">Featured</a></li>
-      <!--SHOW ALL SURVEY BUTTON-->
         <li role="presentation" class="show-all-survey-button"><a href="#">My Surveys</a></li>
         <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-up-modal"><a href="#">Sign-up</a></li>
         <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
@@ -22,7 +21,7 @@
 
       <!--SITE HEADER WITH TITLE-->
       <header class="title-header-section">
-        <h1 class="web-site-title">softserv</h1>
+        <h1 class="web-site-title">SoftSurv</h1>
       </header>
 
       <!--HOME/ show this message when user is not logged in -->
@@ -34,34 +33,18 @@
 
       <!--HOME/ show all surveys when user is logged in -->
       <section class="body container-fluid your-surveys">
-        <div class="surveys clickable-pills">
-          <h2>Survey 1</h1>
+        <div class="survey-form-holder container-fluid">
         </div>
-        <div class="surveys clickable-pills">
-          <h2>Survey 2</h1>
-        </div>
-<!--NEW SURVEY BUTTON-->
-      <section>
-        <button type="button" data-toggle="modal" data-target=".new-survey-modal" name="add-survey">Add Survey</button>
       </section>
-
-
-
-      </section>
-
-      <div class="survey-form-holder container-fluid">
-
-      </div>
 
       <div class="show-all-user-surveys container-fluid">
 
       </div>
 
-      <div class="survey-response-form-holder container-fluid">
+      <section>
+        <button id="floating-action-button" class="floating-add-button" type="button" data-toggle="modal" data-target=".new-survey-modal" name="add-survey">new</button>
 
-      </div>
-
-      <footer></footer>
+      </section>
 
     </body>
 
