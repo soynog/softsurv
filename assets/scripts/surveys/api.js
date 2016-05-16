@@ -35,10 +35,20 @@ const showSurvey = function(success, failure, id) {
 const createSurvey = function(success, failure, question, options) {
   console.log("Creating Survey");
   let url = app.api + '/surveys';
+  let optionsBundle = [];
+  for (let i = 0; i < options.length; i++){
+    optionsBundle.push(
+      {
+        text:options[i],
+        votes: 0
+      }
+    );
+  }
+  console.log(optionsBundle);
   let data = {
     survey: {
       question,
-      options,
+      options : optionsBundle,
     }
   };
   console.log(data);
