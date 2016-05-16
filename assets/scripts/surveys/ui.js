@@ -2,6 +2,8 @@
 const app = require('../app-data');
 const display = require('../display');
 const surveyApi = require('./api');
+const getFormFields = require('../../../lib/get-form-fields');
+const urlParams = require('../url-params');
 // Require app-data so that user/state info can be updated.
 
 // Set of functions to call on success/failure of AJAX requests.
@@ -22,22 +24,30 @@ const getSurveysSuccess = function(data) {
 
 };
 
+// answerSurvey success function
+const respondSurveySuccess = function() {
+  console.log('response success');
+
+};
+
 // showSurvey success function
 const showSurveySuccess = function(data) {
   console.log("Survey Got!");
   console.log(data);
   display.renderSurveyResponseForm({survey : data});
+  $('.survey-response-form').on('submit', function(event){
+    event.preventDefault();
+    let id = urlParams.getUrlParams().id;
+    let data = getFormFields(this);
+    console.log(data);
+    surveyApi.respondSurvey(respondSurveySuccess, failure, id, data);
+  });
 };
 
 // createSurvey success function
 const createSurveySuccess = function(data) {
   console.log("Survey Created!");
   console.log(data);
-};
-
-// answerSurvey success function
-const answerSurveySuccess = function() {
-  console.log('response success');
 };
 
 // deleteSurvey success function
@@ -58,5 +68,5 @@ module.exports = {
   createSurveySuccess,
   getSurveysSuccess,
   showSurveySuccess,
-  answerSurveySuccess,
+  respondSurveySuccess,
 };

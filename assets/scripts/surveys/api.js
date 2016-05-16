@@ -68,10 +68,12 @@ const createSurvey = function(success, failure, question, options) {
 const respondSurvey = function(success, failure, id, data) {
   console.log("patch survey");
   let url = app.api + '/respond/' + id;
+  let patchData = { index : data.surveyOptions };
+  console.log(id);
   $.ajax({
     method: 'PATCH',
     url,
-    data,
+    data: patchData,
   }).done(success)
   .fail(failure);
 };
