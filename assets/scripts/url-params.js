@@ -6,11 +6,16 @@
 const getUrlParams = function() {
   console.log("Getting Parameters from URL");
   let url = location.href;
-  let paramStrings = url.split('?')[1].split('&').map((el) => el.split('='));
-  let params = {};
-  paramStrings.forEach((p) => params[p[0]] = p[1]);
-  console.log(params);
-  return params;
+  let splitUrl = url.split('?');
+  if (splitUrl.length > 1) {
+    let paramStrings = splitUrl[1].split('&').map((el) => el.split('='));
+    let params = {};
+    paramStrings.forEach((p) => params[p[0]] = p[1]);
+    console.log(params);
+    return params;
+  } else {
+    return null;
+  }
 };
 
 module.exports = {

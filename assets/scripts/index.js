@@ -3,10 +3,22 @@
 const authEvents = require('./auth/events');
 const display = require('./display');
 const surveyEvents = require('./surveys/events');
+const urlParams = require('./url-params');
+const surveyApi = require('./surveys/api');
+const surveyUi = require('./surveys/ui');
 
 $(() => {
-  authEvents.addHandlers();
-  display.renderNewSurveyForm();
-  display.showAllUserSurveys();
-  surveyEvents.addHandlers();
+  let params = urlParams.getUrlParams();
+  if (params) {
+    console.log("Grabbing params");
+    console.log(params);
+    surveyApi.showSurvey(surveyUi.showSurveySuccess,surveyUi.failure,params.id);
+  } // else {
+  // Wrap this in an else statement after testing
+    console.log("Ain't no paramters heah");
+    authEvents.addHandlers();
+    display.renderNewSurveyForm();
+    display.showAllUserSurveys();
+    surveyEvents.addHandlers();
+  // }
 });

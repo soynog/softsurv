@@ -1,0 +1,20 @@
+{{#each survey}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{this.survey.question}}</h3>
+    </div>
+    <div class="panel-body">
+      <form class="survey-response-form" data-target="{{this.survey.id}}">
+        {{#each this.survey.options}}
+        <div class="radio">
+          <label>
+            <input type="radio" name="surveyOptions" id="surveyOptions-{{this.survey.options}}" value="option-{{this.survey.options}}" checked>
+            {{this}}
+          </label>
+        </div>
+        {{/each}}
+        <input type="submit" name="submit" class="btn btn-primary input-fields survey-form-submit-button" value="Submit Survey">
+      </form>
+    </div>
+  </div>
+{{/each}}

@@ -12,7 +12,12 @@
       </div>
       <div id="collapse{{this.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{this.id}}">
         <div class="panel-body">
-          {{ this.options }}
+          <ul>
+          {{#each this.options }}
+            <li>{{this}}</li>
+          {{/each}}
+          </ul>
+          <a href="{{this.url}}">URL: {{this.url}}</a>
         </div>
         <button class="btn btn-danger delete-survey" data-target="{{ this.id }}">Delete Survey</button>
       </div>

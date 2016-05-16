@@ -23,6 +23,11 @@ const getSurveysSuccess = function(data) {
 };
 
 // showSurvey success function
+const showSurveySuccess = function(data) {
+  console.log("Survey Got!");
+  console.log(data);
+  display.renderSurveyResponseForm({survey : data});
+};
 
 // createSurvey success function
 const createSurveySuccess = function(data) {
@@ -49,4 +54,5 @@ module.exports = {
   success,
   createSurveySuccess,
   getSurveysSuccess,
+  showSurveySuccess,
 };
