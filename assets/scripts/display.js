@@ -28,8 +28,16 @@ const renderSurveyResponseForm = function(survey) {
   $('.survey-response-form-holder').append(surveyResponse({survey: survey.survey}));
 };
 
+// Adds an additional survey option field
+const addSurveyOption = function() {
+  console.log('Rendering new survey button');
+  let surveyOptionField = require('./templates/survey-option-field.handlebars');
+  $('.survey-options-container').append(surveyOptionField);
+};
+
 module.exports = {
   renderNewSurveyForm,
   showAllUserSurveys,
   renderSurveyResponseForm,
+  addSurveyOption,
 };

@@ -6,15 +6,18 @@
       <h4 class="modal-title">Create a new Survey</h4>
 
       <form id="new-survey-form" class="modal-new-survey-section text" action="index.html" method="post">
-        <input class="input-fields" type="text" name="survey[question]" value="" placeholder="Survey Question">
-        <br>
-        <input class="input-fields" type="text" name="survey[options1]" value="" placeholder="First Option">
-        <br>
-        <input class="input-fields" type="text" name="survey[options2]" value="" placeholder="Second Option">
-        <br>
-        <input class="input-fields" type="text" name="survey[options3]" value="" placeholder="Third Option">
-        <br>
-        <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Create Survey">
+        <div>
+          <input class="input-fields" type="text" name="survey[question]" value="" placeholder="Survey Question">
+        </div>
+        <div class="survey-options-container">
+          {{>survey-option-field}}
+        </div>
+        <div>
+          <button class="add-option-button">Add Option</button>
+        </div>
+        <div>
+          <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Create Survey">
+        </div>
       </form>
 
     </div>
