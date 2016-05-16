@@ -24,8 +24,9 @@ const addHandlers = function() {
     let data = getFormFields(this);
     console.log(data);
     console.log(data.survey.question);
-    console.log(data.survey.options);
-    surveyApi.createSurvey(surveyUi.createSurveySuccess, surveyUi.failure, data.survey.question, data.survey.options);
+    let options = [data.survey.options1, data.survey.options2, data.survey.options3];
+    console.log(options);
+    surveyApi.createSurvey(surveyUi.createSurveySuccess, surveyUi.failure, data.survey.question, options);
   });
 
   // Add answerSurvey handler
