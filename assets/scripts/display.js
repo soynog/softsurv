@@ -15,6 +15,7 @@ const renderNewSurveyForm = function() {
 const showAllUserSurveys = function(surveys) {
   console.log('show all user surveys');
   let showUserSurveys = require('./templates/show-user-surveys.handlebars');
+  console.log("Look PHIL!!", surveys);
   $('.show-all-user-surveys').append(showUserSurveys({
     surveys : surveys
   }));

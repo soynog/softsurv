@@ -14,12 +14,12 @@
         <div class="panel-body">
           <ul>
           {{#each this.options }}
-            <li>{{this}}</li>
+            <li>{{this.text}}</li>
           {{/each}}
           </ul>
-          <a href="{{this.url}}">URL: {{this.url}}</a>
+          <a href="{{this.url}}" target="_blank">URL: {{this.url}}</a>
         </div>
-        <button class="btn btn-danger delete-survey" data-target="{{ this.id }}">Delete Survey</button>
+        <button class="btn btn-danger delete-survey" data-target="{{ this.id }}" >Delete Survey</button>
       </div>
     </div>
     {{/each}}
