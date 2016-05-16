@@ -36,6 +36,9 @@ const createSurveySuccess = function(data) {
 };
 
 // answerSurvey success function
+const answerSurveySuccess = function() {
+  console.log('response success');
+};
 
 // deleteSurvey success function
 
@@ -55,4 +58,5 @@ module.exports = {
   createSurveySuccess,
   getSurveysSuccess,
   showSurveySuccess,
+  answerSurveySuccess,
 };
