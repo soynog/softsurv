@@ -4,6 +4,7 @@
 const surveyApi = require('./api');
 const surveyUi = require('./ui');
 const getFormFields = require('../../../lib/get-form-fields');
+const display = require('../display');
 
 // addHandlers function for Surveys Actions
 // Each handler calls api function and passes ui functions as callbacks
@@ -23,13 +24,19 @@ const addHandlers = function() {
     surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure);
   });
 
+  $('.add-survey-option').on('click', function(event) {
+    console.log("Adding a survey option");
+    event.preventDefault();
+    display.addSurveyOption();
+  });
+
   $('#new-survey-form').on('submit', function (event) {
     event.preventDefault();
     console.log("create request");
     let data = getFormFields(this);
     console.log(data);
     console.log(data.survey.question);
-    let options = [data.survey.options1, data.survey.options2, data.survey.options3];
+    let options = data.survey.options;
     console.log(options);
     surveyApi.createSurvey(surveyUi.createSurveySuccess, surveyUi.failure, data.survey.question, options);
   });
