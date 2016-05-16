@@ -20,7 +20,15 @@ const showAllUserSurveys = function(surveys) {
   }));
 };
 
+// Renders Survey Response Form
+const renderSurveyResponseForm = function() {
+  console.log('rendering survey response form');
+  let surveyResponse = require('./templates/survey-response-form.handlebars');
+  $('.survey-response-form-holder').append(surveyResponse);
+};
+
 module.exports = {
   renderNewSurveyForm,
-  showAllUserSurveys
+  showAllUserSurveys,
+  renderSurveyResponseForm,
 };

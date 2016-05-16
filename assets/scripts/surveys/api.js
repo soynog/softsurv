@@ -21,7 +21,14 @@ const getSurveys = function(success, failure) {
 
 // showSurvey function - GET
 // get the info for a single survey based on its id -- for answering a survey
-// is this necessary? Or will it happen automatically when someone enters the url into the browser?
+const showSurvey = function(success, failure, id) {
+  let url = app.api + '/surveys/' + id;
+  $.ajax({
+    method: 'GET',
+    url
+  }).done(success)
+  .fail(failure);
+};
 
 // createSurvey function - POST
 // user creates a new survey with name, questions, etc.
@@ -66,6 +73,7 @@ const createSurvey = function(success, failure, question, options) {
 // Export functions as module
 module.exports = {
   getSurveys,
+  showSurvey,
   createSurvey,
-  deleteSurvey
+  deleteSurvey,
 };
