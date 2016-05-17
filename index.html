@@ -12,12 +12,11 @@
       <!--NAV BAR -->
       <ul class="nav navbar nav-pills">
           <li><img class="profile-picture" src="" alt="" /></li>
-        <li role="presentation" class="disabled"><a href="#">Featured</a></li>
-        <li role="presentation" class="show-all-survey-button"><a href="#">My Surveys</a></li>
-        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-up-modal"><a href="#">Sign-up</a></li>
-        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
-        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-out-modal"><a href="#">Sign-out</a></li>
-        <li id="" role="presentation" class="pull-right" data-toggle="modal" data-target=".change-pw-modal"><a href="#">Change-PW</a></li>
+        <li id="my-survey-nav" role="presentation" class="hidden show-all-survey-button"><a href="#">My Surveys</a></li>
+        <li id="sign-up-nav" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-up-modal"><a href="#">Sign-up</a></li>
+        <li id="sign-in-nav" role="presentation" class="pull-right" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign-in</a></li>
+        <li id="sign-out-button" role="presentation" class="hidden pull-right" data-toggle="modal" data-target=".sign-out-modal"><a href="#">Sign-out</a></li>
+        <li id="change-pw-nav" role="presentation" class="hidden pull-right" data-toggle="modal" data-target=".change-pw-modal"><a href="#">Change-PW</a></li>
       </ul>
 
       <!--SITE HEADER WITH TITLE-->
@@ -45,7 +44,7 @@
 
 
       <section>
-        <button id="floating-action-button" class="floating-add-button" type="button" data-toggle="modal" data-target=".new-survey-modal" name="add-survey">new</button>
+        <button id="floating-action-button" class="hidden floating-add-button" type="button" data-toggle="modal" data-target=".new-survey-modal" name="add-survey">new</button>
 
       </section>
 

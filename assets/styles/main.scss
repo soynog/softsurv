@@ -30,20 +30,14 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
-    font-size: 18px;
-    color: #6b3e26;
 }
 
 .floating-add-button{
-  display: none;
   width:80px;
   height:80px;
   border-radius:100%;
-  background: #c2f2d0;
   border:none;
   outline:none;
-  color:#FFF;
-  font-size:36px;
   box-shadow: 0 0px 6px rgba(0,0,0,0.16), 0px 5px 6px rgba(0,0,0,0.23);
   transition:.3s;
   -webkit-tap-highlight-color: rgba(0,0,0,0);

@@ -5,7 +5,7 @@ $tan-vanilla: #fdf5c9;
 $green-mint: #c2f2d0;
 $strawberry-icecream: #f5b1af;
 $pink-strawberry: #ffc5d9;
-$brown-chocolate: #6b3e26;
+$chocolate: #6b3e26;
 $orange-sorbet: #ffcb85;
 
 
@@ -18,7 +18,7 @@ body{
   color:$strawberry-icecream;
 }
 .web-site-title {
-  color: $brown-chocolate;
+  color: $chocolate;
 }
 .landing-message{
   background-color: $orange-sorbet;
@@ -34,4 +34,14 @@ body{
 }
 .link-background {
   background: $green-mint;
+}
+#floating-action-button{
+    color: $chocolate;
+}
+.floating-add-button{
+  background: $green-mint;
+  color:#FFF;
+  box-shadow: 0 0px 6px rgba(0,0,0,0.16), 0px 5px 6px rgba(0,0,0,0.23);
+  transition:.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
