@@ -34,10 +34,7 @@ const responseThankYouPage = function() {
 // Survey Response Page
 const surveyResponsePage = function(surveyId) {
   console.log("Loading Survey Response Page");
-  $('body').addClass('link-background');
-  $('.floating-add-button').addClass(".hidden");
-
-  surveyApi.showSurvey([surveyUi.showSurveySuccess,surveyEvents.addResponseHandlers], surveyUi.failure, surveyId);
+  surveyApi.showSurvey([surveyUi.showSurveySuccess, surveyEvents.addResponseHandlers], surveyUi.failure, surveyId);
 };
 
 $(() => {

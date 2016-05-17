@@ -26,6 +26,12 @@ const clearSurveys = function() {
   $('.show-all-user-surveys').html('');
 };
 
+// Clear Survey Response form
+const clearResponseForm = function() {
+  console.log("Clearing Survey Response Form");
+  $('.survey-response-form-holder').empty();
+};
+
 // Clears the page of all content
 const clearContent = function() {
   console.log("Clearing Page Content");
@@ -76,6 +82,18 @@ const onSignOut = function() {
   hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
 };
 
+const showSurveyPage = function() {
+  $('body').addClass('link-background');
+  $('.floating-add-button').addClass(".hidden");
+  clearSurveys();
+};
+
+// Display thank you message on survey Response
+const onSurveyResponse = function() {
+  clearResponseForm();
+  let thankYou = require('./templates/survey-thank-you.handlebars');
+  $('.survey-response-form-holder').append(thankYou);
+};
 
 module.exports = {
   renderNewSurveyForm,
@@ -88,4 +106,6 @@ module.exports = {
   clearContent,
   onSignIn,
   onSignOut,
+  onSurveyResponse,
+  showSurveyPage,
 };

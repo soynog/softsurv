@@ -17,13 +17,14 @@ const getSurveysSuccess = function(data) {
 // answerSurvey success function
 const respondSurveySuccess = function() {
   console.log('response success');
+  display.onSurveyResponse();
 };
 
 // showSurvey success function
 const showSurveySuccess = function(data) {
   console.log("Survey Got!");
   console.log(data);
-  display.clearSurveys();
+  display.showSurveyPage();
   display.renderSurveyResponseForm({survey : data});
 };
 
@@ -37,7 +38,6 @@ const createSurveySuccess = function(data) {
 const deleteSurveySuccess = function(){
   console.log('survey deleted');
   display.clearSurveys();
-  // showSurveys();
 };
 
 // General Success and Failure Functions
