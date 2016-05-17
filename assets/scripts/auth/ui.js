@@ -36,9 +36,6 @@ const signOutSuccess = function() {
   console.log(app);
   action.clearUserSurveys();
   $('.floating-add-button').addClass('hidden');
-  $('#sign-up-nav').removeClass('hidden');
-  $('#sign-in-nav').removeClass('hidden');
-  $('#change-pw-nav').addClass('hidden');
   display.hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
 };
 
