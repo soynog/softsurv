@@ -2,7 +2,6 @@
 
 // Require app-data so that user/state info can be updated.
 const app = require('../app-data');
-const action = require('../surveys/ui');
 const display =require('../display');
 // Set of functions to call on success/failure of AJAX requests.
 
@@ -14,7 +13,6 @@ const signInSuccess = function(data) {
   console.log(data);
   app.user = data.user;
   console.log(app);
-  action.showSurveys();
   $('.sign-in-modal').modal('toggle');
   $('.floating-add-button').removeClass('hidden');
   display.hideNavButtons('#sign-up-nav', '#sign-in-nav', null, '#my-survey-nav', '#change-pw-nav', '#sign-out-button');
@@ -31,6 +29,7 @@ const signUpSuccess = function(data) {
 // Sign Out Success function
 const signOutSuccess = function() {
   app.user = null;
+  app.surveys = null;
   $('#sign-out-button').on('click');
   console.log("User signed out successfully.");
   console.log(app);

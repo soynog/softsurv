@@ -6,23 +6,40 @@ const surveyUi = require('./ui');
 const getFormFields = require('../../../lib/get-form-fields');
 const display = require('../display');
 
+// Add deleteSurvey handlers
+const addDeleteHandlers = function() {
+  $('.delete-survey').on('click', function (event) {
+    event.preventDefault();
+    console.log('survey delete requested');
+    event.preventDefault();
+    let targetId = $(this).data("target");
+    surveyApi.deleteSurvey([surveyUi.deleteSurveySuccess, refreshSurveys], surveyUi.failure, targetId);
+  });
+};
+
+// Calls get surveys, clears old content, and displays them on success
+const refreshSurveys = function() {
+  surveyApi.getSurveys([surveyUi.getSurveysSuccess, addDeleteHandlers], surveyUi.failure);
+};
+
 // addHandlers function for Surveys Actions
 // Each handler calls api function and passes ui functions as callbacks
 const addHandlers = function() {
   console.log("Adding Survey Handlers");
 
   $('.show-all-survey-button').on('click', function (event) {
-    console.log("show all");
+    console.log("Show all surveys button clicked");
     event.preventDefault();
-    surveyApi.getSurveys(surveyUi.getSurveysSuccess, surveyUi.failure);
+    refreshSurveys();
   });
 
-  // Add showSurvey handler
-  $('.single-survey-url').on('click', function (event) {
-    console.log('showing one survery');
-    event.preventDefault();
-    surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure);
-  });
+  // Do we need this?
+  // // Add showSurvey handler
+  // $('.single-survey-url').on('click', function (event) {
+  //   console.log('showing one survery');
+  //   event.preventDefault();
+  //   surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure);
+  // });
 
   $('.add-option-button').on('click', function(event) {
     event.preventDefault();
@@ -38,26 +55,22 @@ const addHandlers = function() {
     console.log(data.survey.question);
     let options = data.survey.options;
     console.log(options);
-    surveyApi.createSurvey(surveyUi.createSurveySuccess, surveyUi.failure, data.survey.question, options);
+    surveyApi.createSurvey([surveyUi.createSurveySuccess, refreshSurveys], surveyUi.failure, data.survey.question, options);
   });
 
-  // Add answerSurvey handler
-  $('.survey-response-form').on('submit', function(event){
-    event.preventDefault();
-    let data = getFormFields(this);
-    surveyUi.showSurveys();
-    console.log(data);
-  });
-
-  // Add deleteSurvey handler
-  $('.delete-survey').on('click', function (event) {
-    event.preventDefault();
-    console.log('survey delete requested');
-    surveyApi.deleteSurvey(surveyApi.deleteSurveySuccess, surveyApi.failure);
-  });
+  // Do we need this?
+  // // Add answerSurvey handler
+  // $('.survey-response-form').on('submit', function(event){
+  //   event.preventDefault();
+  //   let data = getFormFields(this);
+  //   surveyUi.showSurveys();
+  //   console.log(data);
+  // });
 };
 
 // Export Add Handlers Function
 module.exports = {
   addHandlers,
+  refreshSurveys,
+  addDeleteHandlers
 };

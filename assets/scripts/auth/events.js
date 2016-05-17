@@ -1,13 +1,13 @@
 'use strict';
 
 // Require necessary modules
-const getFormFields = require('../../../lib/get-form-fields'); // path from root--should work?
+const getFormFields = require('../../../lib/get-form-fields');
 const authApi = require('./api');
 const authUi = require('./ui');
 
 // addHandlers function for User Auth Actions
 // Each handler calls api function and passes ui functions as callbacks
-const addHandlers = function(signInCallback, signOutCallback) {
+const addHandlers = function(signInCallback) {
   console.log("Adding Auth Handlers");
 
   // Add sign-up handler
@@ -32,7 +32,7 @@ const addHandlers = function(signInCallback, signOutCallback) {
   $('#sign-out-button').on('click', function (event) {
     console.log("Sign Out Button Clicked");
     event.preventDefault();
-    authApi.signOut([authUi.signOutSuccess, signOutCallback], authUi.failure);
+    authApi.signOut([authUi.signOutSuccess], authUi.failure);
 
   });
 

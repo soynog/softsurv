@@ -14,23 +14,13 @@ const getSurveysSuccess = function(data) {
   console.log("Surveys Loaded!");
   app.surveys = data.surveys;
   console.log(app);
-
   display.clearSurveys();
   display.showAllUserSurveys(app.surveys);
-
-  $('.delete-survey').on('click', function (event) {
-    event.preventDefault();
-    console.log('survey delete requested');
-    let targetId = $(this).data("target");
-    surveyApi.deleteSurvey(success, failure, targetId);
-  });
-
 };
 
 // answerSurvey success function
 const respondSurveySuccess = function() {
   console.log('response success');
-
 };
 
 // showSurvey success function
@@ -53,17 +43,17 @@ const createSurveySuccess = function(data) {
   console.log("Survey Created!");
   console.log(data);
 };
-
-const showSurveys = function() {
-  surveyApi.getSurveys(getSurveysSuccess, failure);
-};
+//
+// const showSurveys = function() {
+//   surveyApi.getSurveys(getSurveysSuccess, failure);
+// };
 
 
 // deleteSurvey success function
 const deleteSurveySuccess = function(){
   console.log('survey deleted');
   display.clearSurveys();
-  showSurveys();
+  // showSurveys();
 };
 
 // General Success and Failure Functions
@@ -85,6 +75,5 @@ module.exports = {
   getSurveysSuccess,
   showSurveySuccess,
   respondSurveySuccess,
-  showSurveys,
   deleteSurveySuccess
 };

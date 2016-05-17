@@ -8,6 +8,7 @@ const app = require('../app-data');
 // getUserSurveys function - GET
 // shows all surveys associated with a given user
 const getSurveys = function(success, failure) {
+  console.log("Getting User Surveys");
   let url = app.api + '/surveys';
   $.ajax({
     method: 'GET',
