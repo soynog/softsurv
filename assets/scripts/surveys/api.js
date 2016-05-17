@@ -8,6 +8,7 @@ const app = require('../app-data');
 // getUserSurveys function - GET
 // shows all surveys associated with a given user
 const getSurveys = function(success, failure) {
+  console.log("Getting User Surveys");
   let url = app.api + '/surveys';
   $.ajax({
     method: 'GET',
@@ -78,8 +79,6 @@ const respondSurvey = function(success, failure, id, data) {
   }).done(success)
   .fail(failure);
 };
-
-
 
 // deleteSurvey function - DELETE
   const deleteSurvey = function(success, failure, id) {

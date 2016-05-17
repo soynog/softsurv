@@ -11,14 +11,17 @@ const surveyUi = require('./surveys/ui');
 const userHomePage = function() {
   console.log("Loading User Home Page");
   display.renderNewSurveyForm();
-  display.showAllUserSurveys();
   surveyEvents.addHandlers();
+  surveyEvents.refreshSurveys();
 };
 
 // Welcome/Sign In Page
 const welcomePage = function() {
   console.log("Loading Welcome Page");
+
+  display.clearContent();
   $('body').addClass('main-background');
+
 	display.renderModal();
   authEvents.addHandlers(userHomePage);
 };
@@ -32,7 +35,7 @@ const responseThankYouPage = function() {
 const surveyResponsePage = function(surveyId) {
   console.log("Loading Survey Response Page");
   $('body').addClass('link-background');
-  display.hideNavButtons('.floating-add-button', '#sign-in-nav', '#sign-up-nav', '#back-to-homepage');
+  $('.floating-add-button').addClass(".hidden");
 
   // Refactor to pass add handlers and go to thank you page as on-success functions for showSurvey
   surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure, surveyId);
