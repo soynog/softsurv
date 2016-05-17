@@ -7,27 +7,43 @@ const urlParams = require('./url-params');
 const surveyApi = require('./surveys/api');
 const surveyUi = require('./surveys/ui');
 
+// User Home Page
+const userHomePage = function() {
+  console.log("Loading User Home Page");
+  display.renderNewSurveyForm();
+  display.showAllUserSurveys();
+  surveyEvents.addHandlers();
+};
+
+// Welcome/Sign In Page
+const welcomePage = function() {
+  console.log("Loading Welcome Page");
+  $('body').addClass('main-background');
+	display.renderModal();
+  authEvents.addHandlers(userHomePage);
+};
+
+// Survey Response Thank You
+const responseThankYouPage = function() {
+  console.log("Loading Thank You Page");
+};
+
+// Survey Response Page
+const surveyResponsePage = function(surveyId) {
+  console.log("Loading Survey Response Page");
+  $('body').addClass('link-background');
+  $('.floating-add-button').addClass(".hidden");
+
+  // Refactor to pass add handlers and go to thank you page as on-success functions for showSurvey
+  surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure, surveyId);
+};
+
 $(() => {
   let params = urlParams.getUrlParams();
-  if (params) {
 
-    $('body').addClass('link-background');
-    $('.floating-add-button').addClass(".hidden");
-
-    console.log("Grabbing params");
-    console.log(params);
-    surveyApi.showSurvey(surveyUi.showSurveySuccess,surveyUi.failure,params.id);
-  } //else {
-  // Wrap this in an else statement after testing
-  $('body').addClass('main-background');
-    display.renderModal();
-    console.log("Ain't no paramters heah");
-    authEvents.addHandlers();
-    display.renderNewSurveyForm();
-    display.showAllUserSurveys();
-    surveyEvents.addHandlers();
-
-
-
-  //}
+  if (params && params.id) {
+    surveyResponsePage(params.id);
+  } else {
+    welcomePage();
+  }
 });
