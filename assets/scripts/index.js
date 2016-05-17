@@ -37,8 +37,7 @@ const surveyResponsePage = function(surveyId) {
   $('body').addClass('link-background');
   $('.floating-add-button').addClass(".hidden");
 
-  // Refactor to pass add handlers and go to thank you page as on-success functions for showSurvey
-  surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure, surveyId);
+  surveyApi.showSurvey([surveyUi.showSurveySuccess,surveyEvents.addResponseHandlers], surveyUi.failure, surveyId);
 };
 
 $(() => {
