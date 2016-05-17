@@ -41,10 +41,20 @@ const renderModal = function() {
   $('.modal-body-container').append(renderModal());
 };
 
+const hideNavButtons = function(hide1, hide2, hide3, appear1, appear2, appear3) {
+  $(hide1).addClass('hidden');
+  $(hide2).addClass('hidden');
+  $(hide3).addClass('hidden');
+  $(appear1).removeClass('hidden');
+  $(appear2).removeClass('hidden');
+  $(appear3).removeClass('hidden');
+};
+
 module.exports = {
   renderNewSurveyForm,
   showAllUserSurveys,
   renderSurveyResponseForm,
   addSurveyOption,
   renderModal,
+  hideNavButtons,
 };

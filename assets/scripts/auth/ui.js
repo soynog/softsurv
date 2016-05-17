@@ -3,7 +3,7 @@
 // Require app-data so that user/state info can be updated.
 const app = require('../app-data');
 const action = require('../surveys/ui');
-
+const display =require('../display');
 // Set of functions to call on success/failure of AJAX requests.
 
 // Sign In Success function
@@ -16,6 +16,8 @@ const signInSuccess = function(data) {
   console.log(app);
   action.showSurveys();
   $('.sign-in-modal').modal('toggle');
+  $('.floating-add-button').removeClass('hidden');
+  display.hideNavButtons('#sign-up-nav', '#sign-in-nav', null, '#my-survey-nav', '#change-pw-nav', '#sign-out-button');
 };
 
 // Sign Up Success function
@@ -23,16 +25,21 @@ const signUpSuccess = function(data) {
   console.log("Successfully signed up " + data.user.email);
   $('.sign-up-error').hide();
   $('.sign-up-modal').modal('toggle');
+
 };
 
 // Sign Out Success function
 const signOutSuccess = function() {
   app.user = null;
-  $('#sign-out-button').off('click');
+  $('#sign-out-button').on('click');
   console.log("User signed out successfully.");
   console.log(app);
   action.clearUserSurveys();
-
+  $('.floating-add-button').addClass('hidden');
+  $('#sign-up-nav').removeClass('hidden');
+  $('#sign-in-nav').removeClass('hidden');
+  $('#change-pw-nav').addClass('hidden');
+  display.hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
 };
 
 // Change Password Success function
