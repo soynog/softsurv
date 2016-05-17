@@ -1,13 +1,13 @@
 
 <div class="modal fade new-survey-modal" tabindex="-1" role="dialog" aria-labelledby="new-survey">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog modal-md">
     <div class="modal-content">
 
       <h4 class="modal-title">Create a new Survey</h4>
 
-      <form id="new-survey-form" class="modal-new-survey-section text" action="index.html" method="post">
+      <form id="new-survey-form" class="modal-form modal-new-survey-section text" action="index.html" method="post">
         <div>
-          <input class="input-fields" type="text" name="survey[question]" value="" placeholder="Survey Question">
+          <input class="survey-question input-fields" type="text" name="survey[question]" value="" placeholder="Survey Question">
         </div>
         <div class="survey-options-container">
           {{>survey-option-field}}
