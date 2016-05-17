@@ -13,17 +13,28 @@ const renderNewSurveyForm = function() {
 
 // Renders All User's Surveys
 const showAllUserSurveys = function(surveys) {
-  console.log('show all user surveys');
+  console.log('Showing All User Surveys');
   let showUserSurveys = require('./templates/show-user-surveys.handlebars');
-  console.log("Look PHIL!!", surveys);
   $('.show-all-user-surveys').append(showUserSurveys({
     surveys : surveys
   }));
 };
 
+// Clears the surveys from the page
+const clearSurveys = function() {
+  console.log("Clearing Survey List");
+  $('.show-all-user-surveys').html('');
+};
+
+// Clears the page of all content
+const clearContent = function() {
+  console.log("Clearing Page Content");
+  clearSurveys();
+};
+
 // Renders Survey Response Form
 const renderSurveyResponseForm = function(survey) {
-  console.log('rendering survey response form');
+  console.log('Rendering Survey Response Form');
   let surveyResponse = require('./templates/survey-response-form.handlebars');
   $('.survey-response-form-holder').append(surveyResponse({survey: survey.survey}));
 };
@@ -57,4 +68,6 @@ module.exports = {
   addSurveyOption,
   renderModal,
   hideNavButtons,
+  clearSurveys,
+  clearContent,
 };

@@ -15,12 +15,17 @@ const userHomePage = function() {
   surveyEvents.addHandlers();
 };
 
+// Refresh User surveys
+const refreshUserSurveys = function() {
+
+};
+
 // Welcome/Sign In Page
 const welcomePage = function() {
   console.log("Loading Welcome Page");
   $('body').addClass('main-background');
 	display.renderModal();
-  authEvents.addHandlers(userHomePage);
+  authEvents.addHandlers(userHomePage, welcomePage);
 };
 
 // Survey Response Thank You

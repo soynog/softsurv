@@ -7,22 +7,17 @@ const urlParams = require('../url-params');
 // Require app-data so that user/state info can be updated.
 
 
-const clearUserSurveys = function() {
-  $('.show-all-user-surveys').html('');
-};
-
-
-
 // Set of functions to call on success/failure of AJAX requests.
 
 // getUserSurveys success function
 const getSurveysSuccess = function(data) {
   console.log("Surveys Loaded!");
   app.surveys = data.surveys;
-  clearUserSurveys();
-  display.showAllUserSurveys(app.surveys);
-  console.log(data);
   console.log(app);
+
+  display.clearSurveys();
+  display.showAllUserSurveys(app.surveys);
+
   $('.delete-survey').on('click', function (event) {
     event.preventDefault();
     console.log('survey delete requested');
@@ -42,7 +37,7 @@ const respondSurveySuccess = function() {
 const showSurveySuccess = function(data) {
   console.log("Survey Got!");
   console.log(data);
-  clearUserSurveys();
+  display.clearSurveys();
   display.renderSurveyResponseForm({survey : data});
   $('.survey-response-form').on('submit', function(event){
     event.preventDefault();
@@ -67,7 +62,7 @@ const showSurveys = function() {
 // deleteSurvey success function
 const deleteSurveySuccess = function(){
   console.log('survey deleted');
-  clearUserSurveys();
+  display.clearSurveys();
   showSurveys();
 };
 
@@ -90,7 +85,6 @@ module.exports = {
   getSurveysSuccess,
   showSurveySuccess,
   respondSurveySuccess,
-  clearUserSurveys,
   showSurveys,
   deleteSurveySuccess
 };

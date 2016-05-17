@@ -34,7 +34,7 @@ const signOutSuccess = function() {
   $('#sign-out-button').on('click');
   console.log("User signed out successfully.");
   console.log(app);
-  action.clearUserSurveys();
+  display.clearSurveys();
   $('.floating-add-button').addClass('hidden');
   display.hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
 };
