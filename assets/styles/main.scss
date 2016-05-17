@@ -22,8 +22,22 @@
   display:none;
   text-align: center;
 }
+.modal-logo{
+  padding-top: 10px;
+}
+.input-fields{
+  width: 100%;
+  // margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
 
-
+.modal-form{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+}
 
 // REFACTOR all floating action buttons
 #floating-action-button{
