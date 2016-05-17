@@ -15,12 +15,14 @@ const signInSuccess = function(data) {
   app.user = data.user;
   console.log(app);
   action.showSurveys();
+  $('.sign-in-modal').modal('toggle');
 };
 
 // Sign Up Success function
 const signUpSuccess = function(data) {
   console.log("Successfully signed up " + data.user.email);
   $('.sign-up-error').hide();
+  $('.sign-up-modal').modal('toggle');
 };
 
 // Sign Out Success function
@@ -30,6 +32,7 @@ const signOutSuccess = function() {
   console.log("User signed out successfully.");
   console.log(app);
   action.clearUserSurveys();
+
 };
 
 // Change Password Success function
@@ -37,6 +40,7 @@ const changePWSuccess = function() {
   console.log("Successfully changed password!");
   $('#change-pw-modal').modal('hide');
   $('.change-pw-error').hide();
+  $('.change-pw-modal').modal('toggle');
 };
 
 // General Success and Failure Functions

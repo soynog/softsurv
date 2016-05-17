@@ -35,9 +35,16 @@ const addSurveyOption = function() {
   $('.survey-options-container').append(surveyOptionField);
 };
 
+const renderModal = function() {
+  console.log('rendering modal form');
+  let renderModal = require('./templates/modal-template.handlebars');
+  $('.modal-body-container').append(renderModal());
+};
+
 module.exports = {
   renderNewSurveyForm,
   showAllUserSurveys,
   renderSurveyResponseForm,
   addSurveyOption,
+  renderModal,
 };

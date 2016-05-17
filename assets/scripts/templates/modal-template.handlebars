@@ -1,0 +1,74 @@
+<!--MODAL SIGN-UP-->
+
+  <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <h4 class="modal-title">Sign-up for softsurv</h4>
+        <p class="sign-up-error">Invalid Signup</p>
+        <form id="sign-up-form" class="modal-sign-up-section text" action="index.html" method="post">
+          <input class="input-fields" type="text" name="credentials[email]" value="" placeholder="Email">
+          <br>
+          <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+          <br>
+          <input class="input-fields" type="password" name="credentials[password_confirmation]" value="" placeholder="Password Confirmation">
+          <br>
+          <br>
+          <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Signup">
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+<!--MODAL SIGN-IN-->
+  <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <h4 class="modal-title">Sign-in</h4>
+        <p class="sign-in-error">Invalid Signin</p>
+        <form id="sign-in-form" class="modal-sign-in-section text" action="index.html" method="post">
+          <input class="input-fields" type="text" name="credentials[email]" value="" placeholder="Email">
+          <br>
+          <input class="input-fields" type="password" name="credentials[password]" value="" placeholder="Password">
+          <br>
+          <br>
+          <input id="login-button" type="submit" name="submit" class="btn btn-primary input-fields" value="Login" data-toggle="modal">
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL SIGN-out-->
+    <div class="modal fade sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="sign-out">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <button id="sign-out-button" type="" name="submit" class="btn btn-primary input-fields" value="signOut">SIGN OUT</button>
+
+        </div>
+      </div>
+    </div>
+
+
+<!--MODAL CHANGE PW-->
+  <div class="modal fade change-pw-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <h4 class="modal-title">Sign-up for softsurv</h4>
+        <p class="change-pw-error">Invalid Passwords</p>
+        <form id="change-pw-form" class="modal-change-pw-section text" action="index.html" method="patch">
+          <input class="input-fields" type="password" name="passwords[old]" value="" placeholder="Old Password">
+          <br>
+          <input class="input-fields" type="password" name="passwords[new]" value="" placeholder="New Password">
+          <br>
+          <br>
+          <input id="change-pw" type="submit" name="submit" class="btn btn-primary input-fields" value="Change Password">
+        </form>
+
+      </div>
+    </div>
+  </div>
