@@ -44,7 +44,9 @@ body{
   font-size: 18px;
   font-weight: bolder;
 }
-
+#navbar a:hover{
+  background-color: $green-mint;
+}
 
 
 #floating-action-button{
