@@ -6,12 +6,20 @@ const getFormFields = require('../../../lib/get-form-fields');
 const urlParams = require('../url-params');
 // Require app-data so that user/state info can be updated.
 
+
+const clearUserSurveys = function() {
+  $('.show-all-user-surveys').html('');
+};
+
+
+
 // Set of functions to call on success/failure of AJAX requests.
 
 // getUserSurveys success function
 const getSurveysSuccess = function(data) {
   console.log("Surveys Loaded!");
   app.surveys = data.surveys;
+  clearUserSurveys();
   display.showAllUserSurveys(app.surveys);
   console.log(data);
   console.log(app);
@@ -34,6 +42,7 @@ const respondSurveySuccess = function() {
 const showSurveySuccess = function(data) {
   console.log("Survey Got!");
   console.log(data);
+  clearUserSurveys();
   display.renderSurveyResponseForm({survey : data});
   $('.survey-response-form').on('submit', function(event){
     event.preventDefault();
@@ -50,7 +59,17 @@ const createSurveySuccess = function(data) {
   console.log(data);
 };
 
+const showSurveys = function() {
+  surveyApi.getSurveys(getSurveysSuccess, failure);
+};
+
+
 // deleteSurvey success function
+const deleteSurveySuccess = function(){
+  console.log('survey deleted');
+  clearUserSurveys();
+  showSurveys();
+};
 
 // General Success and Failure Functions
 const success = function(data) {
@@ -61,6 +80,8 @@ const failure = function(error) {
   console.error(error);
 };
 
+
+
 // Export functions as module
 module.exports = {
   failure,
@@ -69,4 +90,7 @@ module.exports = {
   getSurveysSuccess,
   showSurveySuccess,
   respondSurveySuccess,
+  clearUserSurveys,
+  showSurveys,
+  deleteSurveySuccess
 };

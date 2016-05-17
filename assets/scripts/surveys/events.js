@@ -45,15 +45,16 @@ const addHandlers = function() {
   $('.survey-response-form').on('submit', function(event){
     event.preventDefault();
     let data = getFormFields(this);
+    surveyUi.showSurveys();
     console.log(data);
   });
 
   // Add deleteSurvey handler
-//   $('.delete-survey').on('click', function (event) {
-//     event.preventDefault();
-//     console.log('survey delete requested');
-//
-//   });
+  $('.delete-survey').on('click', function (event) {
+    event.preventDefault();
+    console.log('survey delete requested');
+    surveyApi.deleteSurvey(surveyApi.deleteSurveySuccess, surveyApi.failure);
+  });
 };
 
 // Export Add Handlers Function

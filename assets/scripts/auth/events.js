@@ -16,7 +16,7 @@ const addHandlers = function() {
     console.log("Sign Up Requested");
     let data = getFormFields(this);
     console.log(data);
-    authApi.signUp(authUi.signUpSuccess, authUi.failure, data);
+    authApi.signUp(authUi.signUpSuccess, authUi.signUpfailure, data);
   });
 
   // Add sign-in handler
@@ -25,7 +25,7 @@ const addHandlers = function() {
     console.log("Sign In Requested");
     let data = getFormFields(this);
     console.log(data);
-    authApi.signIn(authUi.signInSuccess, authUi.failure, data);
+    authApi.signIn(authUi.signInSuccess, authUi.signInFailure, data);
   });
 
   // Add sign-out handler
@@ -33,6 +33,7 @@ const addHandlers = function() {
     console.log("Sign Out Button Clicked");
     event.preventDefault();
     authApi.signOut(authUi.signOutSuccess, authUi.failure);
+    
   });
 
   // Add change password handler
@@ -40,7 +41,7 @@ const addHandlers = function() {
     console.log("Change Password Requested");
     event.preventDefault();
     let data = getFormFields(this);
-    authApi.changePW(authUi.changePWSuccess, authUi.failure, data);
+    authApi.changePW(authUi.changePWSuccess, authUi.changePWFailure, data);
   });
 };
 
