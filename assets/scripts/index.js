@@ -32,7 +32,7 @@ const responseThankYouPage = function() {
 const surveyResponsePage = function(surveyId) {
   console.log("Loading Survey Response Page");
   $('body').addClass('link-background');
-  $('.floating-add-button').addClass(".hidden");
+  display.hideNavButtons('.floating-add-button', '#sign-in-nav', '#sign-up-nav', '#back-to-homepage');
 
   // Refactor to pass add handlers and go to thank you page as on-success functions for showSurvey
   surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure, surveyId);
