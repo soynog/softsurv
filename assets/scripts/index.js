@@ -26,17 +26,13 @@ const welcomePage = function() {
   authEvents.addHandlers(userHomePage);
 };
 
-// Survey Response Thank You
-const responseThankYouPage = function() {
-  console.log("Loading Thank You Page");
-};
-
 // Survey Response Page
 const surveyResponsePage = function(surveyId) {
   console.log("Loading Survey Response Page");
   surveyApi.showSurvey([surveyUi.showSurveySuccess, surveyEvents.addResponseHandlers], surveyUi.failure, surveyId);
 };
 
+// If there is an id passed as a parameter, go to the survey response page. Otherwise, proceed to the welcome page.
 $(() => {
   let params = urlParams.getUrlParams();
 
