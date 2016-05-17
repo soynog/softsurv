@@ -61,6 +61,22 @@ const hideNavButtons = function(hide1, hide2, hide3, appear1, appear2, appear3) 
   $(appear3).removeClass('hidden');
 };
 
+// Display changes on sign in
+const onSignIn = function() {
+  $('.sign-in-error').addClass('hidden');
+  $('.sign-in-modal').modal('toggle');
+  $('.floating-add-button').removeClass('hidden');
+  hideNavButtons('#sign-up-nav', '#sign-in-nav', null, '#my-survey-nav', '#change-pw-nav', '#sign-out-button');
+};
+
+// Display changes on sign out
+const onSignOut = function() {
+  clearSurveys();
+  $('.floating-add-button').addClass('hidden');
+  hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
+};
+
+
 module.exports = {
   renderNewSurveyForm,
   showAllUserSurveys,
@@ -70,4 +86,6 @@ module.exports = {
   hideNavButtons,
   clearSurveys,
   clearContent,
+  onSignIn,
+  onSignOut,
 };
