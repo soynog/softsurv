@@ -80,8 +80,6 @@ const respondSurvey = function(success, failure, id, data) {
   .fail(failure);
 };
 
-
-
 // deleteSurvey function - DELETE
   const deleteSurvey = function(success, failure, id) {
     console.log("deleting survey");

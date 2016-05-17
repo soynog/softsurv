@@ -6,14 +6,6 @@ const surveyEvents = require('./surveys/events');
 const urlParams = require('./url-params');
 const surveyApi = require('./surveys/api');
 const surveyUi = require('./surveys/ui');
-const app = require('./app-data');
-
-
-// // Refresh User surveys
-// const refreshUserSurveys = function() {
-//   console.log("Refreshing User Surveys");
-//   surveyEvents.showSurveys();
-// };
 
 // User Home Page
 const userHomePage = function() {
@@ -30,7 +22,6 @@ const welcomePage = function() {
   display.clearContent();
   $('body').addClass('main-background');
 
-  // display.hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
 	display.renderModal();
   authEvents.addHandlers(userHomePage);
 };

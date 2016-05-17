@@ -5,6 +5,7 @@ const surveyApi = require('./api');
 const surveyUi = require('./ui');
 const getFormFields = require('../../../lib/get-form-fields');
 const display = require('../display');
+const urlParams = require('../url-params');
 
 // Add deleteSurvey handlers
 const addDeleteHandlers = function() {
@@ -33,14 +34,6 @@ const addHandlers = function() {
     refreshSurveys();
   });
 
-  // Do we need this?
-  // // Add showSurvey handler
-  // $('.single-survey-url').on('click', function (event) {
-  //   console.log('showing one survery');
-  //   event.preventDefault();
-  //   surveyApi.showSurvey(surveyUi.showSurveySuccess, surveyUi.failure);
-  // });
-
   $('.add-option-button').on('click', function(event) {
     event.preventDefault();
     console.log("Adding a survey option");
@@ -57,20 +50,24 @@ const addHandlers = function() {
     console.log(options);
     surveyApi.createSurvey([surveyUi.createSurveySuccess, refreshSurveys], surveyUi.failure, data.survey.question, options);
   });
+};
 
-  // Do we need this?
-  // // Add answerSurvey handler
-  // $('.survey-response-form').on('submit', function(event){
-  //   event.preventDefault();
-  //   let data = getFormFields(this);
-  //   surveyUi.showSurveys();
-  //   console.log(data);
-  // });
+// Add Handlers for Survey Response form
+const addResponseHandlers = function() {
+  $('.survey-response-form').on('submit', function(event){
+    console.log("Adding Survey Response Handlers");
+    event.preventDefault();
+    let id = urlParams.getUrlParams().id;
+    let data = getFormFields(this);
+    console.log(data);
+    surveyApi.respondSurvey(surveyUi.respondSurveySuccess, surveyUi.failure, id, data);
+  });
 };
 
 // Export Add Handlers Function
 module.exports = {
   addHandlers,
   refreshSurveys,
-  addDeleteHandlers
+  addDeleteHandlers,
+  addResponseHandlers
 };

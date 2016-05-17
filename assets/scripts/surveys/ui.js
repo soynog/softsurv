@@ -1,10 +1,9 @@
 'use strict';
 const app = require('../app-data');
 const display = require('../display');
-const surveyApi = require('./api');
-const getFormFields = require('../../../lib/get-form-fields');
-const urlParams = require('../url-params');
-// Require app-data so that user/state info can be updated.
+// const surveyApi = require('./api');
+// const getFormFields = require('../../../lib/get-form-fields');
+// const urlParams = require('../url-params');
 
 
 // Set of functions to call on success/failure of AJAX requests.
@@ -29,13 +28,13 @@ const showSurveySuccess = function(data) {
   console.log(data);
   display.clearSurveys();
   display.renderSurveyResponseForm({survey : data});
-  $('.survey-response-form').on('submit', function(event){
-    event.preventDefault();
-    let id = urlParams.getUrlParams().id;
-    let data = getFormFields(this);
-    console.log(data);
-    surveyApi.respondSurvey(respondSurveySuccess, failure, id, data);
-  });
+  // $('.survey-response-form').on('submit', function(event){
+  //   event.preventDefault();
+  //   let id = urlParams.getUrlParams().id;
+  //   let data = getFormFields(this);
+  //   console.log(data);
+  //   surveyApi.respondSurvey(respondSurveySuccess, failure, id, data);
+  // });
 };
 
 // createSurvey success function
