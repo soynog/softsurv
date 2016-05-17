@@ -20,13 +20,14 @@ $(() => {
   } //else {
   // Wrap this in an else statement after testing
   $('body').addClass('main-background');
+    display.renderModal();
     console.log("Ain't no paramters heah");
     authEvents.addHandlers();
     display.renderNewSurveyForm();
     display.showAllUserSurveys();
     surveyEvents.addHandlers();
 
-    
+
 
   //}
 });
