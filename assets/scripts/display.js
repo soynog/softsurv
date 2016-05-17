@@ -26,6 +26,12 @@ const clearSurveys = function() {
   $('.show-all-user-surveys').html('');
 };
 
+// Clear Survey Response form
+const clearResponseForm = function() {
+  console.log("Clearing Survey Response Form");
+  $('.survey-response-form-holder').empty();
+};
+
 // Clears the page of all content
 const clearContent = function() {
   console.log("Clearing Page Content");
@@ -52,30 +58,56 @@ const renderModal = function() {
   $('.modal-body-container').append(renderModal());
 };
 
-const hideNavButtons = function(hide1, hide2, hide3, appear1, appear2, appear3) {
-  $(hide1).addClass('hidden');
-  $(hide2).addClass('hidden');
-  $(hide3).addClass('hidden');
-  $(appear1).removeClass('hidden');
-  $(appear2).removeClass('hidden');
-  $(appear3).removeClass('hidden');
+const hideElements = function(eltArray) {
+  eltArray.forEach((elt) => {
+    $(elt).addClass('hidden');
+  });
 };
+
+const showElements = function(eltArray) {
+  eltArray.forEach((elt) => {
+    $(elt).removeClass('hidden');
+  });
+};
+
+// const hideNavButtons = function(hide1, hide2, hide3, appear1, appear2, appear3) {
+//   $(hide1).addClass('hidden');
+//   $(hide2).addClass('hidden');
+//   $(hide3).addClass('hidden');
+//   $(appear1).removeClass('hidden');
+//   $(appear2).removeClass('hidden');
+//   $(appear3).removeClass('hidden');
+// };
 
 // Display changes on sign in
 const onSignIn = function() {
   $('.sign-in-error').addClass('hidden');
   $('.sign-in-modal').modal('toggle');
   $('.floating-add-button').removeClass('hidden');
-  hideNavButtons('#sign-up-nav', '#sign-in-nav', null, '#my-survey-nav', '#change-pw-nav', '#sign-out-button');
+  hideElements(['#sign-up-nav', '#sign-in-nav']);
+  showElements(['#my-survey-nav', '#change-pw-nav', '#sign-out-button']);
 };
 
 // Display changes on sign out
 const onSignOut = function() {
   clearSurveys();
   $('.floating-add-button').addClass('hidden');
-  hideNavButtons('#sign-out-button','#change-pw-nav', '#my-survey-nav', '#sign-in-nav', '#sign-up-nav');
+  hideElements(['#sign-out-button','#change-pw-nav', '#my-survey-nav']);
+  showElements(['#sign-in-nav', '#sign-up-nav']);
 };
 
+const showSurveyPage = function() {
+  $('body').addClass('link-background');
+  $('.floating-add-button').addClass(".hidden");
+  clearSurveys();
+};
+
+// Display thank you message on survey Response
+const onSurveyResponse = function() {
+  clearResponseForm();
+  let thankYou = require('./templates/survey-thank-you.handlebars');
+  $('.survey-response-form-holder').append(thankYou);
+};
 
 module.exports = {
   renderNewSurveyForm,
@@ -83,9 +115,10 @@ module.exports = {
   renderSurveyResponseForm,
   addSurveyOption,
   renderModal,
-  hideNavButtons,
   clearSurveys,
   clearContent,
   onSignIn,
   onSignOut,
+  onSurveyResponse,
+  showSurveyPage,
 };
