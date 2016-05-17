@@ -70,6 +70,7 @@ const respondSurvey = function(success, failure, id, data) {
   let url = app.api + '/respond/' + id;
   let patchData = { index : data.surveyOptions };
   console.log(id);
+  console.log(patchData);
   $.ajax({
     method: 'PATCH',
     url,

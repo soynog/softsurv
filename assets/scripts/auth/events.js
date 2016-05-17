@@ -7,7 +7,7 @@ const authUi = require('./ui');
 
 // addHandlers function for User Auth Actions
 // Each handler calls api function and passes ui functions as callbacks
-const addHandlers = function() {
+const addHandlers = function(signInCallback) {
   console.log("Adding Auth Handlers");
 
   // Add sign-up handler
@@ -25,7 +25,7 @@ const addHandlers = function() {
     console.log("Sign In Requested");
     let data = getFormFields(this);
     console.log(data);
-    authApi.signIn(authUi.signInSuccess, authUi.signInFailure, data);
+    authApi.signIn([authUi.signInSuccess, signInCallback], authUi.signInFailure, data);
   });
 
   // Add sign-out handler
@@ -33,7 +33,7 @@ const addHandlers = function() {
     console.log("Sign Out Button Clicked");
     event.preventDefault();
     authApi.signOut(authUi.signOutSuccess, authUi.failure);
-    
+
   });
 
   // Add change password handler
