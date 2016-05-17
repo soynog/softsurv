@@ -12,7 +12,7 @@ $orange-sorbet: #ffcb85;
 
 
 body{
-  background-color: $whipped-cream;
+  //background-color: $whipped-cream;
 }
 .nav > li{
   color:$strawberry-icecream;
@@ -28,4 +28,10 @@ body{
 }
 .clickable-pills h2{
   color: $whipped-cream;
+}
+.main-background {
+  background: $whipped-cream;
+}
+.link-background {
+  background: $green-mint;
 }

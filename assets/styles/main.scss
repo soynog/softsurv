@@ -16,6 +16,13 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.sign-up-error,
+.sign-in-error,
+.change-pw-error {
+  display:none;
+  text-align: center;
+}
+
 
 
 // REFACTOR all floating action buttons
@@ -28,6 +35,7 @@
 }
 
 .floating-add-button{
+  display: none;
   width:80px;
   height:80px;
   border-radius:100%;
@@ -45,4 +53,8 @@
   transform:rotate(360deg);
   -ms-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
+}
+
+.hidden {
+  display: none;
 }
