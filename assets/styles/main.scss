@@ -193,3 +193,11 @@ a.btn-link,button {
 .panel-collapse {
   padding-bottom: 20px;
 }
+
+.option-group {
+  padding: 10px 0;
+
+  .option-input {
+    max-width: 210px;
+  }
+}
