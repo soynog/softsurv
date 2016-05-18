@@ -16,7 +16,7 @@ const addHandlers = function(signInCallback) {
     console.log("Sign Up Requested");
     let data = getFormFields(this);
     console.log(data);
-    authApi.signUp(authUi.signUpSuccess, authUi.signUpfailure, data);
+    authApi.signUp(authUi.signUpSuccess, authUi.signUpFailure, data);
   });
 
   // Add sign-in handler
