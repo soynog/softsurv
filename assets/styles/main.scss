@@ -1,4 +1,6 @@
 
+$softsurv-border-radius: 20px;
+
 body{
 
 }
@@ -16,6 +18,7 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 
 .modal-title{
   padding-top: 20px;
@@ -164,4 +167,24 @@ table {
   .left-col {
     text-align: left;
   }
+}
+
+// Rounder Borders
+.modal-content {
+  border-radius: $softsurv-border-radius;
+}
+.survey-panel.panel {
+  border-radius: $softsurv-border-radius;
+}
+.panel-heading {
+  border-radius: $softsurv-border-radius $softsurv-border-radius 2px 2px;
+}
+.input-fields {
+  border-radius: $softsurv-border-radius;
+}
+a.btn-link,button {
+  border-radius: $softsurv-border-radius;
+}
+.response-pills {
+  border-radius: $softsurv-border-radius;
 }
