@@ -40,6 +40,8 @@ const clearContent = function() {
 
 // Renders Survey Response Form
 const renderSurveyResponseForm = function(survey) {
+  $('#sign-up-nav').addClass('hidden');
+  $('#sign-in-nav').addClass('hidden');
   console.log('Rendering Survey Response Form');
   let surveyResponse = require('./templates/survey-response-form.handlebars');
   $('.survey-response-form-holder').append(surveyResponse({survey: survey.survey}));
