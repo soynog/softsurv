@@ -97,18 +97,22 @@ body{
   display: none;
 }
 
-
-
-.thanks-div {
-  background-color: $chocolate;
+.jumbotron.thanks-div {
+  background-color: $strawberry-icecream;
   color: $whipped-cream;
   text-align: center;
+  border-radius: $softsurv-border-radius;
+  width: 100%;
+  .redirect-button {
+    background-color: $chocolate;
+    border: 0;
+    margin-top: 20px;
+  }
 }
 
 
 .survey-response-form-holder{
   width: 60%;
-
 }
 .response-pills {
   margin: 0 auto;
