@@ -76,19 +76,10 @@ const showElements = function(eltArray) {
   });
 };
 
-// const hideNavButtons = function(hide1, hide2, hide3, appear1, appear2, appear3) {
-//   $(hide1).addClass('hidden');
-//   $(hide2).addClass('hidden');
-//   $(hide3).addClass('hidden');
-//   $(appear1).removeClass('hidden');
-//   $(appear2).removeClass('hidden');
-//   $(appear3).removeClass('hidden');
-// };
-
 // Display changes on sign in
 const onSignIn = function() {
   $('.sign-in-error').addClass('hidden');
-  $('.sign-in-modal').modal('toggle');
+  $('.sign-in-modal').modal('hide');
   $('.floating-add-button').removeClass('hidden');
   hideElements(['#sign-up-nav', '#sign-in-nav', '.splash-message']);
   showElements(['#my-survey-nav', '#change-pw-nav', '#sign-out-button']);

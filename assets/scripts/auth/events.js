@@ -5,6 +5,13 @@ const getFormFields = require('../../../lib/get-form-fields');
 const authApi = require('./api');
 const authUi = require('./ui');
 
+// Signs in User
+const signInUser = function(data, signInCallback) {
+  return () => {
+    authApi.signIn([authUi.signInSuccess, signInCallback], authUi.signInFailure, data);
+  };
+};
+
 // addHandlers function for User Auth Actions
 // Each handler calls api function and passes ui functions as callbacks
 const addHandlers = function(signInCallback) {
@@ -16,7 +23,7 @@ const addHandlers = function(signInCallback) {
     console.log("Sign Up Requested");
     let data = getFormFields(this);
     console.log(data);
-    authApi.signUp(authUi.signUpSuccess, authUi.signUpFailure, data);
+    authApi.signUp([authUi.signUpSuccess, signInUser(data, signInCallback)], authUi.signUpFailure, data);
   });
 
   // Add sign-in handler
@@ -25,7 +32,7 @@ const addHandlers = function(signInCallback) {
     console.log("Sign In Requested");
     let data = getFormFields(this);
     console.log(data);
-    authApi.signIn([authUi.signInSuccess, signInCallback], authUi.signInFailure, data);
+    signInUser(data, signInCallback)();
   });
 
   // Add sign-out handler
