@@ -25,6 +25,8 @@ body{
 .sign-in-error,
 .change-pw-error {
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .modal-logo{
   padding-top: 10px;
@@ -45,14 +47,30 @@ body{
   padding-right: 25px;
   padding-bottom: 40px;
 }
+#delete-survey{
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
 
+#create-survey-button{
+  border-radius: 50px;
+  margin-top: 50px;
+}
 // REFACTOR all floating action buttons
 #floating-action-button{
     position: fixed;
     bottom: 50px;
     right: 50px;
 }
-
+#floating-action-button span{
+    color: $strawberry-icecream;
+}
+.add-mint-to-button{
+  background-color: $green-mint;
+}
 .floating-add-button{
   width:80px;
   height:80px;
@@ -107,4 +125,14 @@ body{
 }
 .thanks-div{
   width: 60%;
+}
+.add-option-button{
+  border-radius: 50px;
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+.add-whipped-cream-to-button{
+  margin-top: 25px;
 }

@@ -5,9 +5,9 @@
     <div class="survey-panel panel">
       <div class="panel-heading" role="tab" id="heading{{this.id}}">
         <h2 class="panel-title">
-          <a class="single-survey-url" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{this.id}}" aria-expanded="true" aria-controls="collapseOne">
+          <p class="single-survey-url" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{this.id}}" aria-expanded="true" aria-controls="collapseOne">
             {{ this.question }}
-          </a>
+          </p>
         </h4>
       </div>
       <div id="collapse{{this.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{this.id}}">
@@ -19,7 +19,7 @@
           </ul>
           <p>URL: <a href="{{this.url}}" target="_blank">{{this.url}}</a></p>
         </div>
-        <button class="btn btn-danger delete-survey" data-target="{{ this.id }}" >Delete Survey</button>
+        <button id="delete-survey" class="btn btn-danger delete-survey" data-target="{{ this.id }}"><span class="glyphicon glyphicon-remove"></span></button>
       </div>
     </div>
     {{/each}}
