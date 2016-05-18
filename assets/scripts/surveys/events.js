@@ -23,6 +23,12 @@ const refreshSurveys = function() {
   surveyApi.getSurveys([surveyUi.getSurveysSuccess, addDeleteHandlers], surveyUi.failure);
 };
 
+//New survey modal
+// $('#floating-action-button').on('click', function(event) {
+//   event.preventDefault();
+//   $('#new-survey-modal').modal('show');
+// });
+
 // addHandlers function for Surveys Actions
 // Each handler calls api function and passes ui functions as callbacks
 const addHandlers = function() {

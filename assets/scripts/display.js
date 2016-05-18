@@ -20,6 +20,9 @@ const showAllUserSurveys = function(surveys) {
   }));
 };
 
+const clearSplash = function(){
+
+};
 // Clears the surveys from the page
 const clearSurveys = function() {
   console.log("Clearing Survey List");
@@ -36,6 +39,7 @@ const clearResponseForm = function() {
 const clearContent = function() {
   console.log("Clearing Page Content");
   clearSurveys();
+  $('.survey-form-holder').html('');
 };
 
 // Renders Survey Response Form
@@ -92,7 +96,7 @@ const onSignIn = function() {
 
 // Display changes on sign out
 const onSignOut = function() {
-  clearSurveys();
+  clearContent();
   $('.floating-add-button').addClass('hidden');
   hideElements(['#sign-out-button','#change-pw-nav', '#my-survey-nav']);
   showElements(['#sign-in-nav', '#sign-up-nav', '.splash-message']);
@@ -123,4 +127,5 @@ module.exports = {
   onSignOut,
   onSurveyResponse,
   showSurveyPage,
+  clearSplash
 };

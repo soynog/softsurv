@@ -22,6 +22,8 @@ const welcomePage = function() {
   display.clearContent();
   $('body').addClass('main-background');
 
+  $('.splash-message').removeClass('hidden');
+
 	display.renderModal();
   authEvents.addHandlers(userHomePage);
 };
@@ -29,6 +31,8 @@ const welcomePage = function() {
 // Survey Response Page
 const surveyResponsePage = function(surveyId) {
   console.log("Loading Survey Response Page");
+  display.clearContent();
+  $('.splash-message').addClass('hidden');
   surveyApi.showSurvey([surveyUi.showSurveySuccess, surveyEvents.addResponseHandlers], surveyUi.failure, surveyId);
 };
 
