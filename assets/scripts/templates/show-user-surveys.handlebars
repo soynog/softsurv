@@ -12,11 +12,20 @@
       </div>
       <div id="collapse{{this.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{this.id}}">
         <div class="panel-body">
-          <ul>
-          {{#each this.options }}
-            <li>{{this.text}} -- {{this.votes}}</li>
-          {{/each}}
-          </ul>
+          <table>
+            <tr>
+              <th class='left-col'>Response</th>
+              <th>Votes</th>
+              <th>Percent</th>
+            </tr>
+            {{#each this.options }}
+              <tr>
+                <td class='left-col'>{{this.text}}</td>
+                <td>{{this.votes}}</td>
+                <td>{{this.percent}}</td>
+              </tr>
+            {{/each}}
+          </table>
           <p>URL: <a href="{{this.url}}" target="_blank">{{this.url}}</a></p>
         </div>
         <button id="delete-survey" class="btn btn-danger delete-survey" data-target="{{ this.id }}"><span class="glyphicon glyphicon-remove"></span></button>
