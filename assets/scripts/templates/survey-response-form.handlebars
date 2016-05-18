@@ -1,9 +1,9 @@
 {{#each survey}}
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="panel response-pills">
+      <div class="panel-heading response-pill-heading">
         <h2 class="panel-title">{{this.question}}</h3>
       </div>
-      <div class="panel-body">
+      <div class="panel-body response-pill-body">
         <form class="survey-response-form" data-target="{{this.survey.id}}">
           {{#each this.options}}
           <div class="radio">

@@ -1,10 +1,14 @@
 
+body{
+
+}
+
 .title-header-section{
   padding-top: 25px;
   padding-bottom: 25px;
 }
 .clickable-pills {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   border-radius: 50px;
 }
@@ -12,6 +16,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .modal-title{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -73,4 +78,33 @@
   background-color: $chocolate;
   color: $whipped-cream;
   text-align: center;
+}
+
+
+.survey-response-form-holder{
+  width: 60%;
+
+}
+.response-pills {
+  margin: 0 auto;
+}
+.response-pills-heading{
+  border-radius: 50px;
+}
+.response-pill-body{
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+.response-pills h2{
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.survey-form-submit-button{
+  border-radius: 50px;
+  width: 50%;
+}
+.thanks-div{
+  width: 60%;
 }
