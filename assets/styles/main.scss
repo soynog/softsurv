@@ -50,12 +50,14 @@ body{
   padding-right: 25px;
   padding-bottom: 40px;
 }
-#delete-survey{
+.delete-survey{
   border-radius: 100%;
   width: 40px;
   height: 40px;
   display: block;
   margin: 0 auto;
+  border-color: $strawberry-icecream;
+  background-color: $strawberry-icecream;
 }
 
 #create-survey-button{
@@ -187,4 +189,7 @@ a.btn-link,button {
 }
 .response-pills {
   border-radius: $softsurv-border-radius;
+}
+.panel-collapse {
+  padding-bottom: 20px;
 }
