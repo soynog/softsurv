@@ -1791,7 +1791,7 @@ webpackJsonp([0],[
 	var Handlebars = __webpack_require__(10);
 	function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 	module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-	    return "<div class=\"jumbotron container thanks-div\">\n  <div class=\"container\">\n    <h1>Thanks!</h1>\n    <a href=\"#\" class=\"btn btn-primary btn-lg redirect-button\">SoftSurv.com</a>\n  </div>\n</div>\n";
+	    return "<div class=\"jumbotron container thanks-div\">\n  <div class=\"container\">\n    <h1>Thanks!</h1>\n    <a href=\"http://schoof-there-it-is.github.io/softsurv/\" class=\"btn btn-primary btn-lg redirect-button\">SoftSurv.com</a>\n  </div>\n</div>\n";
 	},"useData":true});
 
 /***/ },
