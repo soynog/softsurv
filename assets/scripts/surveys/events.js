@@ -49,6 +49,7 @@ const addHandlers = function() {
     let options = data.survey.options;
     console.log(options);
     surveyApi.createSurvey([surveyUi.createSurveySuccess, refreshSurveys], surveyUi.failure, data.survey.question, options);
+    $('.new-survey-modal').modal('hide');
   });
 };
 
