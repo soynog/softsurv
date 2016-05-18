@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+
+  th {
+    background-color: $green-mint;
+    padding: 10px 20px;
+  }
+
+  td {
+    padding: 5px 20px;
+  }
+
+  .left-col {
+    text-align: left;
+  }
+}
