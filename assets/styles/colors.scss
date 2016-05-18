@@ -8,37 +8,10 @@ $pink-strawberry: #ffc5d9;
 $chocolate: #6b3e26;
 $orange-sorbet: #ffcb85;
 
-
-
-
-body{
-  //background-color: $whipped-cream;
-}
+//NAV//////////////////////////
 .nav > li{
   color:$strawberry-icecream;
 }
-.web-site-title {
-  color: $chocolate;
-}
-.modal-logo{
-  color: $chocolate;
-}
-.landing-message{
-  background-color: $orange-sorbet;
-}
-.panel-heading {
-  background-color: $strawberry-icecream;
-}
-.clickable-pills h2{
-  color: $chocolate;
-}
-.main-background {
-  background: $whipped-cream;
-}
-.link-background {
-  background: $green-mint;
-}
-
 #navbar a {
   color: $chocolate;
   font-size: 18px;
@@ -48,8 +21,33 @@ body{
   background-color: $green-mint;
 }
 
+//Panels and Divs////////////////
+.modal-logo{
+  color: $chocolate;
+}
+.web-site-title {
+  color: $chocolate;
+}
+.landing-message{
+  background-color: $orange-sorbet;
+}
+.panel-heading {
+  background-color: $strawberry-icecream;
+}
+.main-background {
+  background: $whipped-cream;
+}
+.link-background {
+  background: $green-mint;
+}
+.delete-survey{
+  border-color: $strawberry-icecream;
+  background-color: $strawberry-icecream;
+}
+
+//Buttons////////////////////
 #floating-action-button{
-    color: $chocolate;
+  color: $chocolate;
 }
 .floating-add-button{
   background: $green-mint;
@@ -58,13 +56,6 @@ body{
   transition:.3s;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-.sign-up-error,
-.sign-in-error,
-.change-pw-error {
-  background-color: $strawberry-icecream;
-  color: $whipped-cream;
-}
-
 .add-whipped-cream-to-button{
   background-color: $orange-sorbet;
 }
@@ -73,4 +64,29 @@ body{
 }
 .add-option-button span{
   color: $whipped-cream;
+}
+.clickable-pills h2{
+  color: $chocolate;
+}
+#floating-action-button span{
+    color: $strawberry-icecream;
+}
+.add-mint-to-button{
+  background-color: $green-mint;
+}
+
+//Errors/////////////////
+.sign-up-error,
+.sign-in-error,
+.change-pw-error {
+  background-color: $strawberry-icecream;
+  color: $whipped-cream;
+}
+
+
+
+//Something else
+
+th {
+  background-color: $green-mint;
 }

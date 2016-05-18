@@ -1,14 +1,7 @@
 
 $softsurv-border-radius: 20px;
 
-body{
-
-}
-
-.title-header-section{
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
+//Panels Section/////////////////////////////////////
 .clickable-pills {
   width: 50%;
   margin: 0 auto;
@@ -18,99 +11,6 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
-.modal-title{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.sign-up-error,
-.sign-in-error,
-.change-pw-error {
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.modal-logo{
-  padding-top: 10px;
-}
-.input-fields{
-  width: 100%;
-  // margin-bottom: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-}
-.survey-question{
-  margin-bottom: 40px;
-}
-
-.modal-form{
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 40px;
-}
-.delete-survey{
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: 0 auto;
-  border-color: $strawberry-icecream;
-  background-color: $strawberry-icecream;
-}
-
-#create-survey-button{
-  border-radius: 50px;
-  margin-top: 50px;
-}
-// REFACTOR all floating action buttons
-#floating-action-button{
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-}
-#floating-action-button span{
-    color: $strawberry-icecream;
-}
-.add-mint-to-button{
-  background-color: $green-mint;
-}
-.floating-add-button{
-  width:80px;
-  height:80px;
-  border-radius:100%;
-  border:none;
-  outline:none;
-  box-shadow: 0 0px 6px rgba(0,0,0,0.16), 0px 5px 6px rgba(0,0,0,0.23);
-  transition:.3s;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.floating-add-button {
-  transform:scale(1.1);
-  transform:rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-}
-
-.hidden {
-  display: none;
-}
-
-.jumbotron.thanks-div {
-  background-color: $strawberry-icecream;
-  color: $whipped-cream;
-  text-align: center;
-  border-radius: $softsurv-border-radius;
-  width: 100%;
-  .redirect-button {
-    background-color: $chocolate;
-    border: 0;
-    margin-top: 20px;
-  }
-}
-
-
 .survey-response-form-holder{
   width: 60%;
 }
@@ -130,12 +30,57 @@ body{
   padding-bottom: 10px;
   text-align: center;
 }
+
+//Modals//////////////////////////////////////
+.modal-title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.modal-logo{
+  padding-top: 10px;
+}
+.modal-form{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+}
+
+//Buttons/////////////////////////////////////
+.delete-survey{
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+#create-survey-button{
+  border-radius: 50px;
+  margin-top: 50px;
+}
+#floating-action-button{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.floating-add-button{
+  width:80px;
+  height:80px;
+  border-radius:100%;
+  border:none;
+  outline:none;
+  box-shadow: 0 0px 6px rgba(0,0,0,0.16), 0px 5px 6px rgba(0,0,0,0.23);
+  transition:.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.floating-add-button {
+  transform:scale(1.1);
+  transform:rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
 .survey-form-submit-button{
   border-radius: 50px;
   width: 50%;
-}
-.thanks-div{
-  width: 60%;
 }
 .add-option-button{
   border-radius: 50px;
@@ -143,26 +88,65 @@ body{
   display: block;
   margin: 0 auto;
 }
-
 .add-whipped-cream-to-button{
   margin-top: 25px;
 }
 
+//Other/////////////////////////////////////
+.input-fields{
+  width: 100%;
+  // margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.survey-question{
+  margin-bottom: 40px;
+}
+.jumbotron.thanks-div {
+  background-color: $strawberry-icecream;
+  color: $whipped-cream;
+  text-align: center;
+  border-radius: $softsurv-border-radius;
+  width: 100%;
+  .redirect-button {
+    background-color: $chocolate;
+    border: 0;
+    margin-top: 20px;
+  }
+}
+.thanks-div{
+  width: 60%;
+}
 .splash-message {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
+.title-header-section{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 
 
-// Styling for survey results tables
+//Errors/////////////////////////////////////
+.sign-up-error,
+.sign-in-error,
+.change-pw-error {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+// Styling for survey results tables//////////////////
 table {
   border-collapse: collapse;
   margin: 20px auto;
 
   th {
-    background-color: $green-mint;
     padding: 10px 20px;
   }
 
@@ -174,7 +158,6 @@ table {
     text-align: left;
   }
 }
-
 // Rounder Borders
 .modal-content {
   border-radius: $softsurv-border-radius;
@@ -202,6 +185,26 @@ a.btn-link,button {
   padding: 10px 0;
 
   .option-input {
-    max-width: 210px;
+    max-width: 90%;
+    border: solid 1px $strawberry-icecream;
   }
 }
+
+
+
+@media (max: 650px) {
+  
+}
+
+
+//
+// input[type="text"] {
+//     border: 1px solid $strawberry-icecream;
+// }
+//
+// input[type="text"]:focus {
+//   border-color: #66afe9;
+//   outline: 0;
+//   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+//   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+// }
