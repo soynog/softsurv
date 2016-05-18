@@ -86,7 +86,7 @@ const onSignIn = function() {
   $('.sign-in-error').addClass('hidden');
   $('.sign-in-modal').modal('toggle');
   $('.floating-add-button').removeClass('hidden');
-  hideElements(['#sign-up-nav', '#sign-in-nav']);
+  hideElements(['#sign-up-nav', '#sign-in-nav', '.splash-message']);
   showElements(['#my-survey-nav', '#change-pw-nav', '#sign-out-button']);
 };
 
@@ -95,7 +95,7 @@ const onSignOut = function() {
   clearSurveys();
   $('.floating-add-button').addClass('hidden');
   hideElements(['#sign-out-button','#change-pw-nav', '#my-survey-nav']);
-  showElements(['#sign-in-nav', '#sign-up-nav']);
+  showElements(['#sign-in-nav', '#sign-up-nav', '.splash-message']);
 };
 
 const showSurveyPage = function() {
