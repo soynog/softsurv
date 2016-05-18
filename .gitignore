@@ -1,7 +1,5 @@
 app.js
-# vendor.js
 specs.js
-# *bundle.js
 _SpecRunner.html
 *.woff2
 *.woff

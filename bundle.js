@@ -277,7 +277,11 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
+<<<<<<< HEAD
 	  api: 'http://localhost:3000'
+=======
+	  api: 'http://gentle-sierra-74062.herokuapp.com'
+>>>>>>> Prepare for Deploy
 	};
 
 	module.exports = app;
