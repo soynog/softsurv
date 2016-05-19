@@ -18,7 +18,7 @@ const signInSuccess = function(data) {
 const signUpSuccess = function(data) {
   console.log("Successfully signed up " + data.user.email);
   $('.sign-up-error').addClass('hidden');
-  $('.sign-up-modal').modal('toggle');
+  $('.sign-up-modal').modal('hide');
 };
 
 // Sign Out Success function
