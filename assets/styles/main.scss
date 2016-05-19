@@ -1,6 +1,8 @@
 
 $softsurv-border-radius: 20px;
-
+.body{
+  padding-bottom: 100px;
+}
 //Panels Section/////////////////////////////////////
 .clickable-pills {
   width: 50%;
@@ -12,7 +14,7 @@ $softsurv-border-radius: 20px;
   padding-bottom: 10px;
 }
 .survey-response-form-holder{
-  width: 60%;
+  width: 80%;
 }
 .response-pills {
   margin: 0 auto;
@@ -119,7 +121,7 @@ $softsurv-border-radius: 20px;
   }
 }
 .thanks-div{
-  width: 60%;
+  width: 80%;
 }
 .splash-message {
   display: block;
@@ -191,24 +193,55 @@ a.btn-link,button {
 }
 
 //Input FOcus
-input:focus{
-  outline: none;
+input{
+  border: solid 2px $strawberry-icecream;
+}
+
+.sign-up-form:focus{
+  border-radius: 50px;
 }
 
 
-
-@media (max-width: 850px) {
+@media (max-width: 950px) {
+  .web-site-title{
+    min-width: 100%;
+  }
+  .navbar{
+    min-width: 100%;
+  }
   .survey-response-form-holder{
-    min-width: 450px;
+    min-width: 100%;
   }
   .thanks-div{
-    min-width: 450px;
+    min-width: 100%;
   }
   .clickable-pills {
-    min-width: 450px;
+    min-width: 100%;
+  }
+  .table{
+    min-width: inherit;
   }
 
 }
+
+// @media (max-width: 950px) {
+//   .web-site-title{
+//     min-width: 450px;
+//   }
+//   .navbar{
+//     min-width: 450px;
+//   }
+//   .survey-response-form-holder{
+//     min-width: 450px;
+//   }
+//   .thanks-div{
+//     min-width: 450px;
+//   }
+//   .clickable-pills {
+//     min-width: 450px;
+//   }
+//
+// }
 
 // @media (max-width: 650px) {
 //   .survey-response-form-holder{
