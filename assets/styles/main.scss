@@ -190,11 +190,44 @@ a.btn-link,button {
   }
 }
 
-
-
-@media (max: 650px) {
-  
+//Input FOcus
+input:focus{
+  outline: none;
 }
+
+
+
+@media (max-width: 850px) {
+  .survey-response-form-holder{
+    min-width: 450px;
+  }
+  .thanks-div{
+    min-width: 450px;
+  }
+  .clickable-pills {
+    min-width: 450px;
+  }
+
+}
+
+// @media (max-width: 650px) {
+//   .survey-response-form-holder{
+//     width: 300px;
+//   }
+//   .thanks-div{
+//     width: 300px;
+//   }
+//   .clickable-pills {
+//     width: 300px;
+//   }
+//   table{
+//     table-layout: fixed;
+//     width: 100%;
+//   }
+// }
+
+
+
 
 
 //
