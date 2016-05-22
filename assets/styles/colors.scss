@@ -86,7 +86,7 @@ $orange-sorbet: #ffcb85;
 input {
   margin-top: 5px;
 }
-.survey-form-submit-button input:focus {
+input:focus {
     outline: 0;
     box-shadow: 0 0 10px $strawberry-icecream;
 }
